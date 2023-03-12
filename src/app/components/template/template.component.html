@@ -1,0 +1,29 @@
+<div class=" container  ">
+  <div class=" sarasa m-1">
+
+    <div class="w-75">
+      <app-button (buttonClick)="handleButtonClick()" [buttonText]="'Botón 1'"
+        [buttonClass]="'btn btn-primary w-100 m-1'">
+      </app-button>
+    </div>
+
+    <div class="w-50">
+      <app-button (buttonClick)="handleButtonClick2()" [buttonText]="'Botón dos'"
+        [buttonClass]="'btn btn-secondary w-100 m-1'">
+      </app-button>
+    </div>
+
+    <div class="w-25">
+      <app-button (buttonClick)="handleButtonClick3()" [buttonText]="'Botón tres'"
+        [buttonClass]="'btn btn-warning w-100 m-1'">
+      </app-button>
+    </div>
+
+  </div>
+
+  <div class="">
+    <p *ngIf="buttonWasClicked">El botón 1 fue clickeado en el componente padre</p>
+    <p *ngIf="buttonWasClicked2">El botón 2 fue clickeado en el componente padre</p>
+    <p *ngIf="buttonWasClicked3">El botón 3 fue clickeado en el componente padre</p>
+  </div>
+</div>
