@@ -6,7 +6,7 @@ This is a generic Angular application built using the Component Driven Developme
 
 Component Driven Development is a software development methodology that involves building an application by breaking it down into smaller, modular components. These components are then built and tested independently, before being integrated into the larger application. This approach has many benefits, including increased development speed, improved code maintainability, and easier testing.
 ### Overview
-The app is built using Angular 12 and uses several components that can be easily customized and reused in other Angular projects. The main goal of this project is to showcase how to implement CDD principles in Angular applications and promote code reusability.
+The app is built using Angular and uses several components that can be easily customized and reused in other Angular projects. The main goal of this project is to showcase how to implement CDD principles in Angular applications and promote code reusability.
 
 
 ##  Getting Started
