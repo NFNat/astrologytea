@@ -1,3 +1,9 @@
-.boton__personal{
-  background-color: blue;
+:root {
+  --color-pigeon: #b2b2dc;
+  --color-powder: #3d3d5c;
+  --color-polo: #89a7d1;
+  --color-lynch: #637b97;
+  --color-catSkill: #dee9f2;
+
+
 }

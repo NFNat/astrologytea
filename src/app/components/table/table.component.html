@@ -1,0 +1,29 @@
+
+
+
+<table class="table" [ngClass]="tableClass" >
+  <thead>
+    <tr>
+      <!-- <th scope="col">ID</th> -->
+      <th *ngIf="nameCol1" scope="col">{{ nameCol1 }}</th>
+      <th *ngIf="nameCol2" scope="col">{{ nameCol2 }}</th>
+      <th *ngIf="nameCol3" scope="col">{{ nameCol3 }}</th>
+      <th *ngIf="nameCol4" scope="col">{{ nameCol4 }}</th>
+      <th *ngIf="nameCol5" scope="col">{{ nameCol5 }}</th>
+      <th *ngIf="nameCol6" scope="col">{{ nameCol6 }}</th>
+      <th *ngIf="nameCol7" scope="col">{{ nameCol7 }}</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let objeto of datosTabla">
+      <td *ngIf="nameCol1">{{ renombraPropiedades(objeto, var1, var2, var3, var4, var5, var6, var7).propiedad1 }}</td>
+      <td *ngIf="nameCol2">{{ renombraPropiedades(objeto, var1, var2, var3, var4, var5, var6, var7).propiedad2 }}</td>
+      <td *ngIf="nameCol3">{{ renombraPropiedades(objeto, var1, var2, var3, var4, var5, var6, var7).propiedad3 }}</td>
+      <td *ngIf="nameCol4">{{ renombraPropiedades(objeto, var1, var2, var3, var4, var5, var6, var7).propiedad4 }}</td>
+      <td *ngIf="nameCol5">{{ renombraPropiedades(objeto, var1, var2, var3, var4, var5, var6, var7).propiedad5 }}</td>
+      <td *ngIf="nameCol6">{{ renombraPropiedades(objeto, var1, var2, var3, var4, var5, var6, var7).propiedad6 }}</td>
+      <td *ngIf="nameCol7">{{ renombraPropiedades(objeto, var1, var2, var3, var4, var5, var6, var7).propiedad7 }}</td>
+    </tr>
+  </tbody>
+</table>

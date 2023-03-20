@@ -1,0 +1,36 @@
+.pigeon{
+  background-color: var(--color-pigeon);
+  color: var(--color-powder);
+}
+.powder{
+  background-color: var(--color-powder);
+  color: var(--color-catSkill);
+
+}
+.fifty{
+  width: 35rem;
+  margin: auto;
+  margin-top: 0;
+  border-radius: 1rem ;
+  -webkit-border-radius: 1rem ;
+  -moz-border-radius: 1rem ;
+  -ms-border-radius: 1rem ;
+  -o-border-radius: 1rem ;
+}
+
+.centrado{
+  display: flex;
+  align-items: center;
+}
+
+/* @media  screen and (max-width: 1200px) {
+  .fifty{
+    width: 50%;
+    margin: auto;
+    border-radius: 2rem ;
+    -webkit-border-radius: 2rem ;
+    -moz-border-radius: 2rem ;
+    -ms-border-radius: 2rem ;
+    -o-border-radius: 2rem ;
+  }
+} */

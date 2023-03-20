@@ -1,0 +1,64 @@
+
+<!-- Todo:
+  *  - Configurar botones app-button en footer con ngIf para que  solo  se muestren si llega la data.
+  *  - Deberan tener un output con un Event Emmiter para uqe en el padre se ejecute la funcion
+  *  - Estudiar las otras clases desde modal-dialog para abajo
+-->
+
+<!--
+ ?  Instrucciones :
+?      * data-bs-backdrop recibe: - false: el usuario no puede ignorar el modal pero el fondo fuera del modal es el mismo
+?                                 - true: El usuario puede hacer click fuera del modal ignorando el contenido. el fondo es grisado
+?                                 - static: el usuario no puede ignorar el modal y el fondo fuera del modal está grisado
+?       Enviar como [modalBack]="'static'"  Si la prop no se envia static es el default
+?
+?     * [ngClass]="modalDClass" por defecto trae modal-dialog-centered ver posibilidades en https://getbootstrap.com/docs/5.3/components/modal/
+?
+ -->
+
+<div
+  [id]="id"
+  class="modal"
+  [ngClass]="modalClass"
+  [attr.data-bs-backdrop]= "modalBack"
+  tabindex="-1" role="dialog"
+  data-bs-keyboard="false"
+  aria-labelledby="staticBackdropLabel"
+  aria-hidden="true"
+  >
+  <div
+  class="modal-dialog  "
+  [ngClass]="modalDClass"
+  role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">{{modalTitle}}</h5>
+        <button
+          type="button"
+          class="btn-close"
+          (click)="closeModal()"
+          data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p *ngIf="buttonWasClicked"> <img src="http://placekitten.com/100/100" alt=""></p>
+          <p>{{modalContent}}</p>
+      </div>
+      <div class="modal-footer">
+        <app-button
+        [buttonText]="modalButton1"
+        [buttonClass]="'btn button button1 mb-1'"
+        (buttonClick)="handleButtonClick()" >
+      </app-button>
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+          (click)="closeModal()"
+          >
+          {{modalButton2}}
+          </button>
+      </div>
+    </div>
+  </div>
+</div>

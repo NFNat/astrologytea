@@ -1,29 +1,217 @@
-<div class=" container  ">
-  <div class=" sarasa m-1">
+<div class=" container-fluid contenedor d-flex">
+  <!-------------->
+  <!-- Botones  -->
+  <!-------------->
+
+  <div class=" menu_lateral col-5 col-sm-4 col-md-3 col-xl-2">
+    <!-- Botones table  -->
 
     <div class="w-75">
-      <app-button (buttonClick)="handleButtonClick()" [buttonText]="'Botón 1'"
-        [buttonClass]="'btn btn-primary w-100 m-1'">
+      <app-button
+      (buttonClick)="handleButtonClick()"
+      [buttonText]="'Tabla 1'"
+      [buttonClass]="'btn button button1 opacity-75 w-100 mb-1'">
       </app-button>
     </div>
 
-    <div class="w-50">
-      <app-button (buttonClick)="handleButtonClick2()" [buttonText]="'Botón dos'"
-        [buttonClass]="'btn btn-secondary w-100 m-1'">
+    <div class="w-75">
+      <app-button
+      (buttonClick)="handleButtonClick2()"
+      [buttonText]="'Tabla 2'"
+      [buttonClass]="'btn button button1 w-100 mb-2'">
       </app-button>
     </div>
+    <div class="border-bottom w-75 mb-2"></div>
 
-    <div class="w-25">
-      <app-button (buttonClick)="handleButtonClick3()" [buttonText]="'Botón tres'"
-        [buttonClass]="'btn btn-warning w-100 m-1'">
-      </app-button>
+    <!-- Botones modales  -->
+    <div class="w-75">
+      <app-button
+      [buttonText]="'Modal No static '"
+      [buttonClass]="'btn  button button2 w-100 mb-1'"
+      data-bs-toggle="modal"
+      data-bs-target="#modal1"
+      ></app-button>
     </div>
-
+    <div class="w-75">
+      <app-button
+      [buttonText]="'Modal static gris '"
+      [buttonClass]="'btn button button2 w-100 mb-1 '"
+      data-bs-toggle="modal"
+      data-bs-target="#modal2"
+        ></app-button>
+    </div>
+    <div class="w-75">
+      <app-button
+      [buttonText]="'Modal static T'"
+      [buttonClass]="'btn button button2 w-100 mb-1'"
+      data-bs-toggle="modal"
+      data-bs-target="#modal3"
+      ></app-button>
+    </div>
+    <div class="w-75">
+      <app-button
+      [buttonText]="'Modal fullscreen'"
+      [buttonClass]="'btn button button2 w-100 mb-2'"
+      data-bs-toggle="modal"
+      data-bs-target="#modal4"
+      ></app-button>
+    </div>
+    <div class="border-bottom w-75 mb-2"></div>
+     <!-- Botones Canvas  -->
+    <div class="w-75">
+    <app-button
+    [buttonText]="'Canvas 1'"
+    [buttonClass]="'btn button button3 w-100 mb-1 '"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#canvas1"
+      > </app-button>
+  </div>
+    <div class="w-75">
+    <app-button
+    [buttonText]="'Canvas 2'"
+    [buttonClass]="'btn button button3 w-100 mb-1 '"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#canvas2"
+      > </app-button>
+  </div>
+    <div class="w-75">
+    <app-button
+    [buttonText]="'Canvas 3'"
+    [buttonClass]="'btn button button3 w-100 mb-1 '"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#canvas3"
+      > </app-button>   </div>
+    <div class="w-75">
+    <app-button
+    [buttonText]="'Canvas 4'"
+    [buttonClass]="'btn button button3 w-100 mb-1 '"
+    data-bs-toggle="offcanvas"
+    data-bs-target="#canvas4"
+      > </app-button>
+  </div>
   </div>
 
-  <div class="">
-    <p *ngIf="buttonWasClicked">El botón 1 fue clickeado en el componente padre</p>
-    <p *ngIf="buttonWasClicked2">El botón 2 fue clickeado en el componente padre</p>
-    <p *ngIf="buttonWasClicked3">El botón 3 fue clickeado en el componente padre</p>
+  <div class="col-7 col-sm-8 col-md-9 col-xl-10 content p-4">
+    <!-- Tables -->
+    <app-table
+    *ngIf="buttonWasClicked"
+    [tableClass] ="'table2 w-75 rounded-4'"
+    [nameCol1]="'CNPJ'"
+    [nameCol2]="'user'"
+    [nameCol3]="'company'"
+    [nameCol4]="'email'"
+    [datosTabla]="brokers"
+    [var1]="'ID'"
+    [var2]="'CNPJ'"
+    [var3]="'user'"
+    [var4]="'company'"
+    [var5]="'email'"
+    ></app-table>
+
+
+    <app-table
+    *ngIf="buttonWasClicked2"
+    [tableClass] ="'table1 w-50 rounded-3'"
+    [nameCol1]="'Name'"
+    [nameCol2]="'Address'"
+    [nameCol3]="'phone'"
+    [nameCol4]="'email'"
+    [datosTabla]="clients"
+    [var1]="'clientName'"
+    [var2]="'address'"
+    [var3]="'phone'"
+    [var4]="'email'"
+    ></app-table>
+
+
+<!-- <app-chart
+
+[chartClass]="'w-50'"
+[chartType]="'line'"
+[chartLabels]="'January', 'February 2019', 'March 2019', 'April 2019'"
+[chartOptions]="'chartOptions'"
+[chartColors]="'chartColors'"
+[chartLegend]="'chartLegend'"
+[chartPlugins]="'chartPlugins'"
+
+></app-chart> -->
+
+
+
+    <p *ngIf="buttonWasClicked3"><img src="http://placekitten.com/g/200/300" alt=""></p>
+    <p>{{ textoPrueba }}</p>
   </div>
+
+
 </div>
+
+<!--  Modals  -->
+<div>
+  <app-modal
+  [id]="'modal1'"
+  [modalClass]="' modal-lg '"
+  [modalBack]="'false'"
+  [modalTitle]="' Modal backdrop false'"
+  [modalContent]="'El usuario no puede ignorar el modal pero el fondo fuera del modal es el mismo '"
+  [modalButton1]="'gatinho'"
+  [modalButton2]="'Ferrar'"
+  ></app-modal>
+  <app-modal
+  [id]="'modal2'"
+  [modalClass]="'fade'"
+  [modalBack]="'static'"
+  [modalTitle]="'Modal backdrop static'"
+  [modalContent]="'El usuario no puede ignorar el modal y el fondo fuera del modal está grisado'"
+  [modalButton1]="'kitten'"
+  [modalButton2]="'Close'"
+  ></app-modal>
+  <app-modal
+  [id]="'modal3'"
+  [modalClass]="'fade'"
+  [modalDClass]="'modal-dialog-centered'"
+  [modalBack]="'true'"
+  [modalTitle]="'Modal backdrop true'"
+  [modalContent]="'El usuario puede hacer click fuera del modal ignorando el contenido. el fondo es grisado. modal-dialog-centered '"
+  [modalButton1]="'gatito'"
+  [modalButton2]="'Cerrar'"
+  ></app-modal>
+  <app-modal
+  [id]="'modal4'"
+  [modalClass]="'fade'"
+  [modalDClass]="'modal-fullscreen'"
+  [modalBack]="'static'"
+  [modalTitle]="'Modal backdrop static'"
+  [modalContent]="'El usuario no puede ignorar el modal y el fondo fuera del modal está grisado'"
+  [modalButton1]="'kitten'"
+  [modalButton2]="'Close'"
+  ></app-modal>
+  <!--  Canvas -->
+  <app-canvas
+    [id]="'canvas1'"
+    [canvasTitle]="'Canvas 1'"
+    [canvasContent]="'Contenido del Canvas 1'"
+    [canvasButton1]="'Cerrar'"
+    [canvasClass] ="'offcanvas-start pigeon'"
+  ></app-canvas>
+  <app-canvas
+    [id]="'canvas2'"
+    [canvasTitle]="'Canvas 2'"
+    [canvasContent]="'Similar a un modal'"
+    [canvasButton1]="'Aceptar'"
+    [canvasClass] ="'offcanvas-top centrado fifty '"
+  ></app-canvas>
+  <app-canvas
+    [id]="'canvas3'"
+    [canvasTitle]="'Canvas 3'"
+    [canvasContent]="'Contenido del Canvas 3'"
+    [canvasButton1]="'Cerrar'"
+    [canvasClass] ="'offcanvas-end powder fifty'"
+  ></app-canvas>
+  <app-canvas
+    [id]="'canvas4'"
+    [canvasTitle]="'Canvas 4'"
+    [canvasContent]="'Contenido del Canvas 4'"
+    [canvasButton1]="'Opciones'"
+    [canvasClass] ="'offcanvas-bottom text-bg-dark'"
+  ></app-canvas>
+  </div>

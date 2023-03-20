@@ -1,0 +1,30 @@
+<div
+class="offcanvas"
+[ngClass]="canvasClass"
+tabindex="-1"
+[id]="id"
+aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel"> {{ canvasTitle }}</h5>
+    <button
+    type="button"
+    class="btn-close"
+    (click)="closeCanvas()"
+    data-bs-dismiss="offcanvas"
+    aria-label="Close"
+
+    ></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      {{ canvasContent }}
+    </div>
+    <div class=" mt-3">
+      <app-button
+      [buttonText]="canvasButton1"
+      [buttonClass]="'btn button button1 mb-1'">
+      </app-button>
+
+    </div>
+  </div>
+</div>
