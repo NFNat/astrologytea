@@ -1,27 +1,31 @@
-# CddProject
+# Angular Component Driven Development Example
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+This is a generic Angular application built using the Component Driven Development (CDD) methodology. CDD is an approach to software development that focuses on building software in small, reusable components.
 
-## Development server
+## Introduction
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Component Driven Development is a software development methodology that involves building an application by breaking it down into smaller, modular components. These components are then built and tested independently, before being integrated into the larger application. This approach has many benefits, including increased development speed, improved code maintainability, and easier testing.
+### Overview
+The app is built using Angular 12 and uses several components that can be easily customized and reused in other Angular projects. The main goal of this project is to showcase how to implement CDD principles in Angular applications and promote code reusability.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+##  Getting Started
+To get started, you will need to have Node.js and Angular CLI installed on your machine.
 
-## Build
+- Clone the repository: git clone https://github.com/<username>/<repository>.git
+- Navigate to the project directory: cd <repository> 
+- Install dependencies: npm install
+- Start the development server: ng serve
+- You should now be able to view the app in your browser at http://localhost:4200/.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Angualr Cli data 
 
-## Running unit tests
+- Angular CLI: 13.0.4
+- Node: 16.13.2
+- Package Manager: npm 8.10.0
+- Angular: 13.0.3
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
-## Running end-to-end tests
+## Contributing
+Contributions to this project are welcome. If you'd like to contribute, please fork the repository and submit a pull request.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
