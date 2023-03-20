@@ -1,3 +1,29 @@
+
+
+  <!-- todo:
+
+  * *     En caso  que se necesiten mas valores se debe modificar el Ts y agregar mas datasets -->
+
+<!-- ? Intrucciones
+* ?  - En el componente padre enviar la sguiente información:
+?     [id]="'chart1'"  // id del chart, debe ser unico
+?     [chartType]="''" // Un string con el tipo de chart, ej: 'bar', 'line', 'pie', 'doughnut', 'radar', 'polarArea'
+?     [chartClass]="''" // Un string con las clases css/bootstrap que se aplicaran al chart, ej: 'w-50'
+?     [dataLabels]="labels" // Un array con los labels que se mostrarán en el chart, ej: ['label1', 'label2', 'label3']. Puede traer valores de un servicio
+?     [dataValues1]="values1" // Un array con los valores que se mostrarán en el chart, ej: [1, 2, 3]. Puede traer valores de un servicio
+?      [dataLabel1]="'Valores A'" // Un string con el nombre que se mostrará en la leyenda del chart, ej: 'Valores A'
+?      [data1Bg]="'rgba(178, 178, 220, 0.65)'" // Un string con el color de fondo que se aplicará a los datos del chart, ej: 'rgba(178, 178, 220, 0.65)'
+?                  No acepta colores mediante variables de css, debe ser un string con el color en hexadecimal, rgb o rgba.
+?      [data1border]="'#3d3d5c'" // Un string con el color del borde que se aplicará a los datos del chart, ej: '#3d3d5c'
+?     [data1fill]="true" // Un booleano que indica si se debe rellenar el area del chart, ej: true. Si no se envía, por defecto es false
+?    [data1Hidden]="false" // Sebe enviar false para que se muestren los datos, si no se envía, por defecto es true y no se muestran los datos
+?   [LabelDisplay]="false" // Sebe enviar false para que no se muestren los labels, si no se envía, por defecto es true y se muestran los labels
+?  Se debe enviar  [data3Bg]="'transparent'" y  [data3border]="'transparent'" para  que no se muestre uncuadrado gris en la leyenda
+
+-->
+
 <div [class]="chartClass">
-  <canvas id="myChart"  #mychart></canvas>
+  <canvas [id]="chartId"  #mychart></canvas>
 </div>
+
+

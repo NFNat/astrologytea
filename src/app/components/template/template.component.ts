@@ -11,17 +11,21 @@ export class TemplateComponent implements OnInit {
 
 
 
-  dataLabels = {
-    label1: "label1",
-    label2: "label2",
-    label3: "label3",
-    label4: "label3",
-    label5: "label3",
-    label6: "label3",
-  }
 
-    //create an object dataLabels label1, label2, label3, label4, label5, label6
-    //create an object dataValues value1, value2, value3, value4, value5, value6
+// datos para el chart1
+
+  labels = [ "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" ]
+  values1 = [ 0, 20, 40, 50, 60, 80, 53 ]
+  values2 = [ 0, 30, 50, 30, 50, 75, 26 ]
+  values5 = [ 0, 15, 30, 70, 20, 50, 15 ]
+
+// datos para el chart2
+
+labels1 = [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ]
+values3 = [ 0, 20, 40, 50, 60, 80, 20, 40, 50, 60, 80, 15 ]
+values4 = [ 0, 30, 50, 30, 50, 75, 0, 30, 50, 30, 50, 75 ]
+
+
 
 
 

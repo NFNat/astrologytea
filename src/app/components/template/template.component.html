@@ -23,6 +23,15 @@
     </div>
     <div class="border-bottom w-75 mb-2"></div>
 
+    <!-- Botones Charts -->
+    <div class="w-75">
+      <app-button
+      (buttonClick)="handleButtonClick3()"
+      [buttonText]="'Charts'"
+      [buttonClass]="'btn button button4 w-100 mb-2'">
+      </app-button>
+    </div>
+    <div class="border-bottom w-75 mb-2"></div>
     <!-- Botones modales  -->
     <div class="w-75">
       <app-button
@@ -124,22 +133,107 @@
     ></app-table>
 
 
-<!-- <app-chart
-
-[chartClass]="'w-50'"
-[chartType]="'line'"
-[chartLabels]="'January', 'February 2019', 'March 2019', 'April 2019'"
-[chartOptions]="'chartOptions'"
-[chartColors]="'chartColors'"
-[chartLegend]="'chartLegend'"
-[chartPlugins]="'chartPlugins'"
-
-></app-chart> -->
 
 
 
-    <p *ngIf="buttonWasClicked3"><img src="http://placekitten.com/g/200/300" alt=""></p>
+    <div class="container" *ngIf="buttonWasClicked3">
+ <!-- Charts -->
+ <div class="row ">
+      <app-chart
+      [id]="'chart1'"
+      [chartType]="'line'"
+      [chartClass]="'w-50'"
+      [dataLabels]="labels"
+
+      [dataValues1]="values1"
+      [dataLabel1]="'Valores A'"
+      [data1Bg]="'rgba(178, 178, 220, 0.65)'"
+      [data1border]="'#3d3d5c'"
+      [data1Hidden]="false"
+
+      [dataValues2]="values2"
+      [dataLabel2]="'Valores B'"
+      [data2Bg]="'#89a7d1'"
+      [data2border]="'#3d3d5c'"
+      [data2Hidden]="false"
+
+      [dataValues3]="values5"
+      [dataLabel3]="'Valores C'"
+      [data3Bg]="'#89a7d1'"
+      [data3border]="'#3d3d5c'"
+      [data3Hidden]="false"
+
+
+      ></app-chart>
+    </div>
+    <div class="row pt-5">
+      <div class="col">
+      <app-chart
+      [id]="'chart2'"
+      [chartType]="'radar'"
+      [chartClass]="'w-75'"
+      [dataLabels]="labels1"
+
+
+      [dataValues1]="values3"
+      [dataLabel1]="'Valores X'"
+      [data1Bg]="'rgba(178, 178, 220, 0.65)'"
+      [data1border]="'#3d3d5c'"
+      [data1fill]="true"
+      [data1Hidden]="false"
+
+
+      [dataValues2]="values4"
+      [dataLabel2]="'Valores Y'"
+      [data2Bg]="'#ffbf00'"
+      [data2border]="'#3d3d5c'"
+      [data2fill]="true"
+      [data2Hidden]="false"
+
+
+      [data3Bg]="'transparent'"
+      [data3border]="'transparent'"
+      ></app-chart>
+    </div>
+
+    <div class="col">
+      <app-chart
+      [id]="'chart3'"
+      [chartType]="'polarArea'"
+      [chartClass]="'w-75'"
+      [dataLabels]="labels"
+      [labelDisplay]="false"
+
+
+
+
+      [dataValues1]="values1"
+      [dataLabel1]="'Valores A'"
+      [data1Bg]="'rgba(178, 178, 220, 0.65)'"
+      [data1border]="'#3d3d5c'"
+      [data1Hidden]="false"
+
+      [dataValues2]="values2"
+      [dataLabel2]="'Valores B'"
+      [data2Bg]="'#8f2d56'"
+      [data2border]="'#637b97'"
+      [data2Hidden]="false"
+      ></app-chart>
+
+    </div>
+    </div>
+
+    </div>
     <p>{{ textoPrueba }}</p>
+  </div>
+
+
+  <div>
+
+
+
+
+
   </div>
 
 
