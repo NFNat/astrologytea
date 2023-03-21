@@ -1,4 +1,7 @@
 <div class=" container-fluid contenedor d-flex">
+
+
+
   <!-------------->
   <!-- Botones  -->
   <!-------------->
@@ -27,10 +30,26 @@
     <div class="w-75">
       <app-button
       (buttonClick)="handleButtonClick3()"
-      [buttonText]="'Charts'"
+      [buttonText]="'Charts1'"
       [buttonClass]="'btn button button4 w-100 mb-2'">
       </app-button>
     </div>
+    <div class="w-75">
+      <app-button
+      (buttonClick)="handleButtonClick4()"
+      [buttonText]="'Charts2'"
+      [buttonClass]="'btn button button4 w-100 mb-2'">
+      </app-button>
+    </div>
+
+    <div class="w-75">
+      <app-button
+      (buttonClick)="handleButtonClick5()"
+      [buttonText]="'Charts3'"
+      [buttonClass]="'btn button button4 w-100 mb-2'">
+      </app-button>
+    </div>
+
     <div class="border-bottom w-75 mb-2"></div>
     <!-- Botones modales  -->
     <div class="w-75">
@@ -66,7 +85,7 @@
       ></app-button>
     </div>
     <div class="border-bottom w-75 mb-2"></div>
-     <!-- Botones Canvas  -->
+    <!-- Botones Canvas  -->
     <div class="w-75">
     <app-button
     [buttonText]="'Canvas 1'"
@@ -100,8 +119,17 @@
   </div>
   </div>
 
+<!-- Tables -->
   <div class="col-7 col-sm-8 col-md-9 col-xl-10 content p-4">
-    <!-- Tables -->
+
+    <ng-container *ngIf="!buttonWasClicked && !buttonWasClicked2 && !buttonWasClicked3 && !buttonWasClicked4 && !buttonWasClicked5">
+      <div class="Container">
+        <h1>Angular Component Driven Development Example</h1>
+        <p>Try pressing the different buttons</p>
+      </div>
+    </ng-container>
+
+
     <app-table
     *ngIf="buttonWasClicked"
     [tableClass] ="'table2 w-75 rounded-4'"
@@ -116,8 +144,6 @@
     [var4]="'company'"
     [var5]="'email'"
     ></app-table>
-
-
     <app-table
     *ngIf="buttonWasClicked2"
     [tableClass] ="'table1 w-50 rounded-3'"
@@ -131,115 +157,409 @@
     [var3]="'phone'"
     [var4]="'email'"
     ></app-table>
+    <p>{{ textoPrueba }}</p>
 
 
-
-
-
-    <div class="container" *ngIf="buttonWasClicked3">
- <!-- Charts -->
- <div class="row ">
+<!-- Charts 1 -->
+  <div class="container" *ngIf="buttonWasClicked3">
+    <div class="row ">
+      <div class="col-6">
       <app-chart
-      [id]="'chart1'"
+        [id]="'chart1'"
+        [chartType]="'line'"
+        [chartClass]="'w-100'"
+        [dataLabels]="labels"
+        [border]="'#3d3d5c'"
+
+        [dataValues1]="values1"
+        [dataLabel1]="'Valores A'"
+        [data1Bg]="'rgba(178, 178, 220, 0.65)'"
+        [data1Hidden]="false"
+
+        [dataValues2]="values2"
+        [dataLabel2]="'Valores B'"
+        [data2Bg]="'#89a7d1'"
+
+        [data2Hidden]="false"
+
+        [dataValues3]="values5"
+        [dataLabel3]="'Valores C'"
+        [data3Bg]="'#89a7d1'"
+        [data3Hidden]="false"
+        ></app-chart>
+      </div>
+      <div class="col-6">
+        <app-chart
+          [id]="'chart2'"
+          [chartType]="'bar'"
+          [chartClass]="'w-100'"
+          [dataLabels]="labels"
+          [border]="'#3d3d5c'"
+
+          [dataValues1]="values1"
+          [dataLabel1]="'Valores A'"
+          [data1Bg1]="[
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)',
+          'rgb(255, 205, 86)'
+        ]"
+          [data1Hidden]="false"
+
+          [dataValues2]="values2"
+          [dataLabel2]="'Valores B'"
+          [data2Bg]="'#89a7d1'"
+          [data2Hidden]="false"
+
+          [dataValues3]="values5"
+          [dataLabel3]="'Valores C'"
+          [data3Bg]="'#89a7d1'"
+          [data3Hidden]="false"
+          ></app-chart>
+        </div>
+
+    </div>
+      <div class="row pt-5">
+        <div class="col-6">
+          <app-chart
+          [id]="'chart3'"
+          [chartType]="'line'"
+          [chartClass]="'w-100'"
+          [dataLabels]="labels"
+          [tension]="0.5"
+          [border]="'#8f2d56'"
+          [radius]="0"
+          [borderWith]="1"
+
+          [dataValues1]="values1"
+          [dataLabel1]="'Valores A'"
+          [data1Bg]="'rgba(178, 178, 220, 0.35)'"
+          [data1Hidden]="false"
+          [datafill]="true"
+
+          [dataValues2]="values2"
+          [dataLabel2]="'Valores B'"
+          [data2Bg]="'rgba(255, 99, 132, 0.35)'"
+          [data2Hidden]="false"
+
+          [dataValues3]="values5"
+          [dataLabel3]="'Valores C'"
+          [data3Bg]="'#89a7d1'"
+          [data3Hidden]="false"
+
+          ></app-chart>
+
+
+        </div>
+        <div class="col-6">
+        <app-chart
+        [id]="'chart4'"
+        [chartType]="'radar'"
+        [chartClass]="'w-75'"
+        [dataLabels]="labels1"
+        [border]="'#3d3d5c'"
+        [datafill]="true"
+
+        [dataValues1]="values3"
+        [dataLabel1]="'Valores X'"
+        [data1Bg]="'rgba(178, 178, 220, 0.65)'"
+        [data1Hidden]="false"
+
+        [dataValues2]="values4"
+        [dataLabel2]="'Valores Y'"
+        [data2Bg]="'#ffbf00'"
+
+        [data2Hidden]="false"
+        [data3Bg]="'transparent'"
+        [data3border]="'transparent'"
+        ></app-chart>
+      </div>
+
+
+      </div>
+  </div>
+
+<!-- Charts 2 -->
+
+  <div class="container contenedor" *ngIf="buttonWasClicked4">
+<div class="row">
+  <div class="col-6">
+      <app-chart
+        [id]="'chart5'"
+        [chartType]="'pie'"
+        [chartClass]="'w-50'"
+        [dataLabels]="labels"
+
+        [dataValues1]="values1"
+        [dataLabel1]="'Valores A'"
+
+        [data1Bg1]=" [
+        'rgb(255, 99, 132)',
+        'rgb(54, 162, 235)',
+        'rgb(255, 205, 86)'
+      ]"
+        [data1border]="'#3d3d5c'"
+        [data1Hidden]="false"
+
+        ></app-chart>
+      </div>
+<div class="col-6">
+        <app-chart
+          [id]="'chart6'"
+          [chartType]="'doughnut'"
+          [chartClass]="'w-75'"
+          [dataLabels]="labels"
+
+          [dataValues1]="values1"
+          [dataLabel1]="'Valores A'"
+          [data1border]="'#3d3d5c'"
+          [data1Hidden]="false"
+          [data1Bg1]="[
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)',
+          'rgb(255, 205, 86)',
+          'rgb(155, 99, 100)',
+          'rgb(154, 62, 135)',
+          'rgb(200, 105, 186)',
+        ]"
+
+
+          [dataValues2]="values2"
+          [dataLabel2]="'Valores B'"
+
+          [data2border]="'#3d3d5c'"
+          [data2Hidden]="false"
+          [data2Bg2]="[
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)',
+          'rgb(255, 205, 86)',
+          'rgb(155, 99, 100)',
+          'rgb(154, 62, 135)',
+          'rgb(200, 105, 186)'
+        ]"
+
+          [dataValues3]="values5"
+          [dataLabel3]="'Valores C'"
+
+          [data3border]="'#3d3d5c'"
+          [data3Hidden]="false"
+          [data3Bg3]="[
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)',
+          'rgb(255, 205, 86)',
+          'rgb(155, 99, 100)',
+          'rgb(154, 62, 135)',
+          'rgb(200, 105, 186)'
+        ]"
+          ></app-chart>
+        </div>
+
+      </div>
+<div class="row">
+
+  <div class="col-8">
+        <app-chart
+        [id]="'chart7'"
+        [chartType]="'polarArea'"
+        [chartClass]="'w-50 marginNegative'"
+        [dataLabels]="labels"
+        [labelDisplay]="true"
+
+        [dataValues1]="values1"
+        [dataLabel1]="'Valores A'"
+
+        [data1border]="'#3d3d5c'"
+        [data1Hidden]="false"
+        [data1Bg1]="[
+        'rgba(255, 99, 132, 0.65)',
+        'rgba(54, 162, 235, 0.65)',
+        'rgba(255, 205, 86, 0.65)',
+        'rgba(155, 99, 100, 0.65)',
+        'rgba(154, 62, 135, 0.65)',
+        'rgba(200, 105, 186, 0.65)',
+      ]"
+
+        [dataValues2]="values2"
+        [dataLabel2]="'Valores B'"
+
+        [data2border]="'#637b97'"
+        [data2Hidden]="false"
+        [data2Bg2]="[
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)',
+          'rgb(255, 205, 86)',
+          'rgb(155, 99, 100)',
+          'rgb(154, 62, 135)',
+          'rgb(200, 105, 186)'
+        ]"
+        ></app-chart>
+      </div>
+
+      </div>
+
+      <div class="col-4"></div>
+  </div>
+
+
+
+<!-- Charts 3 -->
+<div class="" *ngIf="buttonWasClicked5">
+  <div class="row ">
+
+    <div>
+      <h2> Mismos datos mostrados diferente</h2>
+      <label class="px-2">
+        <input type="radio" name="chartType" value="line" [(ngModel)]="chartType"> Line
+      </label>
+      <label  class="px-2">
+        <input type="radio" name="chartType" value="bar" [(ngModel)]="chartType"> Bar
+      </label>
+      <label  class="px-2">
+        <input type="radio" name="chartType" value="radar" [(ngModel)]="chartType"> Radar
+      </label>
+      <label  class="px-2">
+        <input type="radio" name="chartType" value="pie" [(ngModel)]="chartType"> Pie
+      </label>
+    </div>
+
+
+
+
+
+
+    <ng-container *ngIf="chartType === 'line'">
+    <app-chart
+      [id]="'chart8'"
       [chartType]="'line'"
-      [chartClass]="'w-50'"
+      [chartClass]="'w-75'"
       [dataLabels]="labels"
+      [border]="'#3d3d5c'"
 
       [dataValues1]="values1"
       [dataLabel1]="'Valores A'"
       [data1Bg]="'rgba(178, 178, 220, 0.65)'"
-      [data1border]="'#3d3d5c'"
       [data1Hidden]="false"
 
       [dataValues2]="values2"
       [dataLabel2]="'Valores B'"
       [data2Bg]="'#89a7d1'"
-      [data2border]="'#3d3d5c'"
+
       [data2Hidden]="false"
 
       [dataValues3]="values5"
       [dataLabel3]="'Valores C'"
       [data3Bg]="'#89a7d1'"
-      [data3border]="'#3d3d5c'"
       [data3Hidden]="false"
-
-
       ></app-chart>
-    </div>
-    <div class="row pt-5">
-      <div class="col">
+    </ng-container>
+    <ng-container *ngIf="chartType === 'bar'">
       <app-chart
-      [id]="'chart2'"
-      [chartType]="'radar'"
-      [chartClass]="'w-75'"
-      [dataLabels]="labels1"
+        [id]="'chart8'"
+        [chartType]="'bar'"
+        [chartClass]="'w-75'"
+        [dataLabels]="labels"
+        [border]="'#3d3d5c'"
 
+        [dataValues1]="values1"
+        [dataLabel1]="'Valores A'"
+        [data1Bg]="'rgba(178, 178, 220, 0.65)'"
+        [data1Hidden]="false"
 
-      [dataValues1]="values3"
-      [dataLabel1]="'Valores X'"
-      [data1Bg]="'rgba(178, 178, 220, 0.65)'"
-      [data1border]="'#3d3d5c'"
-      [data1fill]="true"
-      [data1Hidden]="false"
+        [dataValues2]="values2"
+        [dataLabel2]="'Valores B'"
+        [data2Bg]="'#89a7d1'"
 
+        [data2Hidden]="false"
 
-      [dataValues2]="values4"
-      [dataLabel2]="'Valores Y'"
-      [data2Bg]="'#ffbf00'"
-      [data2border]="'#3d3d5c'"
-      [data2fill]="true"
-      [data2Hidden]="false"
+        [dataValues3]="values5"
+        [dataLabel3]="'Valores C'"
+        [data3Bg]="'#89a7d1'"
+        [data3Hidden]="false"
+        ></app-chart>
+      </ng-container>
+      <ng-container *ngIf="chartType === 'radar'">
+        <app-chart
+          [id]="'chart8'"
+          [chartType]="'radar'"
+          [chartClass]="'w-50'"
+          [dataLabels]="labels"
+          [border]="'#3d3d5c'"
+          [datafill]="true"
 
+          [dataValues1]="values1"
+          [dataLabel1]="'Valores A'"
+          [data1Bg]="'rgba(255, 99, 132, 0.35)'"
+          [data1Hidden]="false"
 
-      [data3Bg]="'transparent'"
-      [data3border]="'transparent'"
-      ></app-chart>
+          [dataValues2]="values2"
+          [dataLabel2]="'Valores B'"
+          [data2Bg]="'rgba(54, 162, 235, 0.35)'"
+
+          [data2Hidden]="false"
+
+          [dataValues3]="values5"
+          [dataLabel3]="'Valores C'"
+          [data3Bg]="'rgba(255, 205, 86, 0.65)'"
+          [data3Hidden]="false"
+          ></app-chart>
+        </ng-container>
+
+        <ng-container *ngIf="chartType === 'pie'">
+          <app-chart
+            [id]="'chart8'"
+            [chartType]="'pie'"
+            [chartClass]="'w-50'"
+            [dataLabels]="labels"
+            [border]="'#3d3d5c'"
+
+            [dataValues1]="values1"
+            [dataLabel1]="'Valores A'"
+            [data1Bg1]="[
+          'rgb(255, 99, 132)',
+          'rgb(54, 162, 235)',
+          'rgb(255, 205, 86)',
+          'rgb(155, 99, 100)',
+          'rgb(154, 62, 135)',
+          'rgb(200, 105, 186)',
+        ]"
+            [data1Hidden]="false"
+
+            [dataValues2]="values2"
+            [dataLabel2]="'Valores B'"
+            [data2Bg2]="[
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)',
+            'rgb(155, 99, 100)',
+            'rgb(154, 62, 135)',
+            'rgb(200, 105, 186)',
+          ]"
+
+            [data2Hidden]="false"
+
+            [dataValues3]="values5"
+            [dataLabel3]="'Valores C'"
+            [data3Bg3]="[
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)',
+            'rgb(155, 99, 100)',
+            'rgb(154, 62, 135)',
+            'rgb(200, 105, 186)',
+          ]"
+            [data3Hidden]="false"
+            ></app-chart>
+          </ng-container>
+
     </div>
 
-    <div class="col">
-      <app-chart
-      [id]="'chart3'"
-      [chartType]="'polarArea'"
-      [chartClass]="'w-75'"
-      [dataLabels]="labels"
-      [labelDisplay]="false"
 
-
-
-
-      [dataValues1]="values1"
-      [dataLabel1]="'Valores A'"
-      [data1Bg]="'rgba(178, 178, 220, 0.65)'"
-      [data1border]="'#3d3d5c'"
-      [data1Hidden]="false"
-
-      [dataValues2]="values2"
-      [dataLabel2]="'Valores B'"
-      [data2Bg]="'#8f2d56'"
-      [data2border]="'#637b97'"
-      [data2Hidden]="false"
-      ></app-chart>
-
-    </div>
-    </div>
-
-    </div>
-    <p>{{ textoPrueba }}</p>
   </div>
-
-
-  <div>
-
-
-
-
-
-  </div>
-
 
 </div>
 
-<!--  Modals  -->
+</div>
+
+<!--  Modals  y canvas -->
 <div>
   <app-modal
   [id]="'modal1'"
@@ -308,4 +628,4 @@
     [canvasButton1]="'Opciones'"
     [canvasClass] ="'offcanvas-bottom text-bg-dark'"
   ></app-canvas>
-  </div>
+</div>

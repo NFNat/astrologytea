@@ -1,6 +1,8 @@
 
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output,ChangeDetectorRef, ViewChild, SimpleChanges  } from '@angular/core';
 import { Renderer2 } from '@angular/core';
+
+
 
 @Component({
   selector: 'app-template',
@@ -10,6 +12,7 @@ import { Renderer2 } from '@angular/core';
 export class TemplateComponent implements OnInit {
 
 
+  public chartType: string = 'line';
 
 
 // datos para el chart1
@@ -24,16 +27,6 @@ export class TemplateComponent implements OnInit {
 labels1 = [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ]
 values3 = [ 0, 20, 40, 50, 60, 80, 20, 40, 50, 60, 80, 15 ]
 values4 = [ 0, 30, 50, 30, 50, 75, 0, 30, 50, 30, 50, 75 ]
-
-
-
-
-
-
-
-
-
-
 
   clients = [
     {
@@ -141,28 +134,67 @@ values4 = [ 0, 30, 50, 30, 50, 75, 0, 30, 50, 30, 50, 75 ]
   buttonWasClicked = false;
   buttonWasClicked2 = false;
   buttonWasClicked3 = false;
+  buttonWasClicked4 = false;
+  buttonWasClicked5 = false;
 
   textoPrueba ="";
 
 
 
-  constructor(private renderer: Renderer2) { }
+  constructor(
+    private renderer: Renderer2,
+    private changeDetectorRef: ChangeDetectorRef) {
+
+
+     }
 
   ngOnInit(): void {
+
   }
+
+
+
+
+
+
 
 handleButtonClick() {
     this.buttonWasClicked = !this.buttonWasClicked;
+    this.buttonWasClicked3 =false
+    this.buttonWasClicked4 =false
+    this.buttonWasClicked5 =false
   }
 
   handleButtonClick2() {
     this.buttonWasClicked2 = !this.buttonWasClicked2 ;
+    this.buttonWasClicked3 =false
+    this.buttonWasClicked4 =false
+    this.buttonWasClicked5 =false
+
   }
   handleButtonClick3() {
     this.buttonWasClicked3 = !this.buttonWasClicked3 ;
+
+    this.buttonWasClicked =false
+    this.buttonWasClicked2 =false
+    this.buttonWasClicked4 =false
+    this.buttonWasClicked5 =false
+  }
+  handleButtonClick4() {
+    this.buttonWasClicked4 = !this.buttonWasClicked4 ;
+    this.buttonWasClicked =false
+    this.buttonWasClicked2 =false
+    this.buttonWasClicked3 =false
+    this.buttonWasClicked5 =false
   }
 
-
+  handleButtonClick5() {
+    this.buttonWasClicked5 = !this.buttonWasClicked5 ;
+    this.buttonWasClicked =false
+    this.buttonWasClicked2 =false
+    this.buttonWasClicked3 =false
+    this.buttonWasClicked4 =false
+  }
 
 
 

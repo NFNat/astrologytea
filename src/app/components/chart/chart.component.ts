@@ -15,9 +15,15 @@ import { Chart, ChartConfiguration, ChartDataset, TooltipItem, LegendItem } from
 })
 export class ChartComponent implements OnInit {
   @Input() chartClass:string = '';
-  @Input() chartType:any = '';
+  // @Input() chartType:any = '';
   @Input() chartId = '';
   @Input() labelDisplay = true;
+  @Input() tension:number = 0;
+  @Input() border:string = '';
+  @Input() borderWith:number = 1;
+  @Input() radius:number = 3;
+
+  @Input() chartType: any = '';
 
   @Input() dataLabel1:string = '';
   @Input() dataLabel2:string = '';
@@ -27,14 +33,19 @@ export class ChartComponent implements OnInit {
   @Input() data2Bg:string = '';
   @Input() data3Bg:string = '';
 
+  @Input() data1Bg1: any[] = [];
+  @Input() data2Bg2: any[] = [];
+  @Input() data3Bg3: any[] = [];
+
   @Input() data1border:string = '';
   @Input() data2border:string = '';
   @Input() data3border:string = '';
 
 
-  @Input() data1fill:boolean = false;
-  @Input() data2fill:boolean = false;
-  @Input() data3fill:boolean = false;
+
+  @Input() datafill:boolean = false;
+  // @Input() data2fill:boolean = false;
+  // @Input() data3fill:boolean = false;
 
   @Input() data1Hidden:boolean = true;
   @Input() data2Hidden:boolean = true;
@@ -66,25 +77,22 @@ export class ChartComponent implements OnInit {
             datasets: [{
                 label: this.dataLabel1,
                 data: this.dataValues1,
-                backgroundColor: this.data1Bg,
-                borderColor: this.data1border,
-                fill: this.data1fill,
+                backgroundColor: this.data1Bg || this.data1Bg1,
+                // borderColor: this.data2border,
                 hidden: this.data1Hidden
             },
             {
                 label: this.dataLabel2,
                 data: this.dataValues2,
-                backgroundColor: this.data2Bg,
-                borderColor: this.data2border,
-                fill: this.data2fill,
+                backgroundColor: this.data2Bg || this.data2Bg2,
+                // borderColor: this.data2border,
                 hidden: this.data2Hidden
             },
             {
               label: this.dataLabel3,
               data: this.dataValues3,
-              backgroundColor: this.data3Bg,
-              borderColor: this.data3border,
-              fill: this.data3fill,
+              backgroundColor: this.data3Bg || this.data3Bg3,
+              // borderColor: this.data3border,
               hidden: this.data3Hidden
           }
 
@@ -97,12 +105,23 @@ export class ChartComponent implements OnInit {
               display: this.labelDisplay,
               labels: {
                 boxWidth:20,
+              },
+              }
+            },
+            elements:{
+              line:{
+                tension: this.tension,
+                borderColor:this.border,
+                borderWidth: this.borderWith,
+                fill: this.datafill,
 
               },
-
+              point:{
+                radius: this.radius,
               }
-            }
           }
+
+        }
 
 
 
