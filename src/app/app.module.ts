@@ -11,6 +11,7 @@ import { TableComponent } from './components/table/table.component';
 import { ChartComponent } from './components/chart/chart.component';
 import { NgChartsModule } from 'ng2-charts';
 import { FormsModule } from '@angular/forms';
+import { CarrouselComponent } from './components/carrousel/carrousel.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     ModalComponent,
     CanvasComponent,
     TableComponent,
-    ChartComponent
+    ChartComponent,
+    CarrouselComponent
   ],
   imports: [
     BrowserModule,
