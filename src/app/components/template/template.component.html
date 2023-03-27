@@ -130,15 +130,44 @@
       </div>
 
       <app-carrousel
-      [id]="'carrousel1'"
-      [texto]="' Primer slide carro 1 ' "
+      [id]="'carousel1'"
+      [target]="'#carousel1'"
       [carouselClass]="'carousel slide '"
       [carouselClass1]="'carousel-indicators'"
+      [carouselClass2]="'carousel-item h-30vh'"
+      [slide1Title]="' Primer slide carro 1 ' "
+      [slide1Text]="'Sarasa lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
+      [slide1Img]="'../../../assets/bote.jpg'"
+      [slide2Title]="' Segunda slide carro 1 ' "
+      [slide2Text]="' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus aliquam perspiciatis distinctio beatae sunt illo?'"
+      [slide2Img]="'../../../assets/china.jpg'"
+      [slide3Title]="' Tercer slide carro 1 ' "
+      [slide3Text]="'  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium labore incidunt alias dolor.'"
+      [slide3Img]="'../../../assets/tunel.jpg'"
+      ></app-carrousel>
+      <div class="border-bottom w-75 mb-5"></div>
+      <app-carrousel
+      [id]="'carousel2'"
+      [target]="'#carousel2'"
+      [carouselRide]="'carousel'"
+      [carouselClass]="'carousel slide '"
+      [carouselClass1]="'carousel-indicators'"
+      [carouselClass2]="'carousel-item h-40vh'"
+      [slide1Title]="' Primer slide carro 2 ' "
+      [slide1Text]="'Sarasa lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
+      [slide1Img]="'../../../assets/travel.jpg'"
+      [slide2Title]="' Segunda slide carro 2 ' "
+      [slide2Text]="' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus aliquam perspiciatis distinctio beatae sunt illo?'"
+      [slide2Img]="'../../../assets/rabbit.jpg'"
+      [slide3Title]="' Tercer slide carro 2 ' "
+      [slide3Text]="'  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium labore incidunt alias dolor.'"
+      [slide3Img]="'../../../assets/flower.jpg'"
       ></app-carrousel>
 
 
-      <div class="border-bottom w-75 mb-2"></div>
 
+
+      <div class="border-bottom w-75 mb-2"></div>
 
 
 
