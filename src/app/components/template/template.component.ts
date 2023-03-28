@@ -28,6 +28,35 @@ labels1 = [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Ago
 values3 = [ 0, 20, 40, 50, 60, 80, 20, 40, 50, 60, 80, 15 ]
 values4 = [ 0, 30, 50, 30, 50, 75, 0, 30, 50, 30, 50, 75 ]
 
+
+
+carousel1 = [
+  {
+    slideTitle: "Slide 1 ngFor",
+    slideText: "Lorem ipsum dolor sit amet",
+    slideImg: "../../../assets/bote.jpg",
+    active: "",
+    carouselImg: "carouselImg",
+  },
+  {
+    slideTitle: "Slide 2",
+    slideText: "Lorem ipssum dolor sit amet, consectetur adipiscing elit. ",
+    slideImg: "../../../assets/china.jpg",
+    active: "",
+    carouselImg: "carouselImg ",
+
+  },
+  {
+    slideTitle: "Slide 3",
+    slideText: "Lorem ipsum dolor sit amet, eget aliquam nisl nisl sit amet nisl. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam mauris, eget aliquam nisl nisl sit amet nisl.",
+    slideImg: "../../../assets/tunel.jpg",
+    active: "",
+    carouselImg: "carouselImg",
+
+  }
+];
+
+
   clients = [
     {
       clientName: "Juan Perez",

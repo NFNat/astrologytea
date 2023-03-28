@@ -1,15 +1,32 @@
 <div
 [id]="id"
- [ngClass]="carouselClass"
-[attr.data-bs-ride]="carouselRide"
+ [class]="carouselClass"
+ style="height: 100%"
   >
   <div [ngClass]="carouselClass1">
     <button type="button" [attr.data-bs-target]="target"  data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" [attr.data-bs-target]="target"  data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" [attr.data-bs-target]="target"  data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div class="carousel-inner   ">
-    <div class="active"
+  <div class="carousel-inner " *ngFor="let objeto of datosCarousel, let  i = index">
+
+    <div class="carousel-item"
+    [ngClass]="{'active': i === 0}"
+    >
+
+      <img
+      [src]="renombraPropiedades(objeto, var1, var2, var3, var4, var5, var6, var7).propiedad3 "
+      [ngClass]="renombraPropiedades(objeto, var1, var2, var3, var4, var5, var6, var7).propiedad5" alt="...">
+
+      <div class="carousel-caption d-none d-md-block">
+        <h5>{{ renombraPropiedades(objeto, var1, var2, var3, var4, var5, var6, var7).propiedad2 }}</h5>
+        <p> {{ renombraPropiedades(objeto, var1, var2, var3, var4, var5, var6, var7).propiedad1 }}</p>
+      </div>
+    </div>
+
+
+
+    <!-- <div class="active"
     [ngClass]="carouselClass2">
       <img [src]="slide1Img" class="img" alt="...">
       <div class="carousel-caption d-none d-md-block">
@@ -17,21 +34,27 @@
         <p>{{ slide1Text}}</p>
       </div>
     </div>
-    <div [ngClass]="carouselClass2">
+    <div
+    class=""
+     [ngClass]="carouselClass2">
       <img [src]="slide2Img" class="img" alt="...">
       <div class="carousel-caption d-none d-md-block">
         <h5>{{slide2Title}}</h5>
         <p>{{ slide2Text}}</p>
       </div>
     </div>
-    <div [ngClass]="carouselClass2">
+    <div
+    class=""
+    [ngClass]="carouselClass2">
       <img [src]="slide3Img" class="img " alt="...">
-
       <div class="carousel-caption d-none d-md-block">
         <h5>{{slide3Title}}</h5>
         <p>{{ slide3Text}}</p>
       </div>
     </div>
+ -->
+
+
   </div>
   <button class="carousel-control-prev" type="button" [attr.data-bs-target]="target" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
