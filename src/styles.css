@@ -1,12 +1,43 @@
+@import '~ngx-toastr/toastr';
+
+@import "~ngx-toastr/toastr.css";
+
 :root {
   --color-pigeon: #b2b2dc;
   --color-powder: #3d3d5c;
   --color-polo: #89a7d1;
   --color-lynch: #637b97;
   --color-catSkill: #dee9f2;
-  --color-camelot: #8f2d56;
+  --color-camelot: rgb(143, 45, 86);
   --color-amber: #f1c40e;
   --color-carrot: #fc923b;
 
 
+}
+.ngx-toastr {
+  background-color: rgba(143, 45, 86, 0.5);
+
+  pointer-events: auto;
+  border: #8f2d56 1px solid;
+}
+.toast-success {
+  background-color: var(--color-pigeon);
+}
+.toast-close-button {
+  position: relative;
+  right: -0.3em;
+  top: -0.9em;
+  float: right;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--color-camelot);
+  text-shadow: 0 1px 0 #ffffff;
+  /* opacity: 0.8; */
+}
+.toast-close-button:hover,
+.toast-close-button:focus {
+  color: var(--color-amber);
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.4;
 }

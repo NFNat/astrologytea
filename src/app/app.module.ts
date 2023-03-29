@@ -13,6 +13,12 @@ import { NgChartsModule } from 'ng2-charts';
 import { FormsModule } from '@angular/forms';
 import { CarrouselComponent } from './components/carrousel/carrousel.component';
 
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { ToastrModule } from 'ngx-toastr';
+import { NavbarComponent } from './components/navbar/navbar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,13 +28,17 @@ import { CarrouselComponent } from './components/carrousel/carrousel.component';
     CanvasComponent,
     TableComponent,
     ChartComponent,
-    CarrouselComponent
+    CarrouselComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
     NgChartsModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    CommonModule,
+    BrowserAnimationsModule, // required animations module
+    ToastrModule.forRoot(), // ToastrModule added
   ],
   providers: [],
   bootstrap: [AppComponent]

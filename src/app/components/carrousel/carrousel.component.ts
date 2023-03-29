@@ -13,7 +13,8 @@ export class CarrouselComponent implements OnInit {
   @Input() carouselRide:string = '';
   @Input() carouselClass:string = '';
   @Input() carouselClass1:string = '';
-  //@Input() carouselClass2:string = '';
+  @Input() carouselClass2:string = '';
+  @Input() carouselImg:string = '';
   @Input() intemActive:string = '';
 
   @Input() slide1Title:string = '';

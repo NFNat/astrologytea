@@ -1,7 +1,26 @@
 
-.carouselImg{
-  height: 20rem;
+.img25{
+  height: 25vh;
   width: 100%;
   object-fit: cover;
-
+}
+.img30{
+  height: 30vh;
+  width: 100%;
+  object-fit: cover;
+}
+.img40{
+  height: 40vh;
+  width: 100%;
+  object-fit: cover;
+}
+.img50{
+  height: 50vh;
+  width: 100%;
+  object-fit: cover;
+}
+.img100{
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
 }

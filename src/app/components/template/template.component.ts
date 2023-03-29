@@ -1,6 +1,8 @@
 
 import { Component, EventEmitter, Input, OnInit, Output,ChangeDetectorRef, ViewChild, SimpleChanges  } from '@angular/core';
 import { Renderer2 } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+
 
 
 
@@ -172,19 +174,33 @@ carousel1 = [
 
   constructor(
     private renderer: Renderer2,
-    private changeDetectorRef: ChangeDetectorRef) {
+    private changeDetectorRef: ChangeDetectorRef,
+    private toastr: ToastrService) {
 
 
      }
 
   ngOnInit(): void {
 
+
   }
 
 
 
 
+  showSuccess() {
+    this.toastr.success('Hello world!', 'Toastr fun!');
+  }
+  show() {
+    this.toastr.show('Este es un mensaje', 'Recuerde tal cosa',{
+      closeButton: true,
+      timeOut:0
+    } );
+  }
 
+  showToast() {
+    this.toastr.success('¡Hola mundo!');
+  }
 
 
 handleButtonClick() {

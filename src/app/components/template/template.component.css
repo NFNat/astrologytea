@@ -1,14 +1,24 @@
 .contenedor{
 height: 100vh;
+padding-top: 2.5rem;
+padding-bottom: 2.5rem;
+
+
+
+
+
 /* width: 100vw; */
 
 }
 .menu_lateral{
   background-color: var(--color-pigeon);
-  padding-top: 10rem;
-  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center ;
 
 }
 .content {
 background-color: var(--color-catSkill);
 }
+

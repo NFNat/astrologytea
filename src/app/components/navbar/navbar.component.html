@@ -1,0 +1,90 @@
+<!-- todo:
+* * Ver tema active
+? pulir el tema de las clases -->
+
+<nav
+[class]="navbar1"
+>
+  <div class="container-fluid">
+    <a
+    class="navbar-brand"
+    [href]="link1"
+    target="_blank"
+    >
+    {{brand}}</a>
+    <!-- boton que aparece cuando se colapsa. Enviar [colapse]="true" para que apaerzca-->
+    <button
+    *ngIf="colapse"
+    class="navbar-toggler"
+    type="button" data-bs-toggle="collapse"
+    [attr.data-bs-target]="navbarTarget"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div
+    [class]="navbar2"
+    class="collapse navbar-collapse"
+    [id]="navbarId">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li
+        *ngIf="texto2"
+        class="nav-item">
+          <a class="nav-link active text-white" aria-current="page" [href]="link2">{{texto2}}</a>
+        </li>
+        <li
+        *ngIf="texto3" class="nav-item">
+          <a class="nav-link" [href]="link3">{{texto3}}</a>
+        </li>
+        <li
+        *ngIf="texto4" class="nav-item">
+          <a class="nav-link" [href]="link4">{{texto4}}</a>
+        </li>
+        <li
+        *ngIf="texto5" class="nav-item">
+          <a class="nav-link" [href]="link5">{{texto5}}</a>
+        </li>
+        <li
+        *ngIf="texto6" class="nav-item">
+          <a class="nav-link" [href]="link6">{{texto6}}</a>
+        </li>
+        <li
+        *ngIf="texto7" class="nav-item">
+          <a class="nav-link" [href]="link7">{{texto7}}</a>
+        </li>
+
+        <!-- dropDown  -->
+        <li
+        *ngIf="dropDown" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" [href]="link8" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            {{texto8}}
+          </a>
+          <ul class="dropdown-menu  bodyNav">
+            <li  *ngIf="texto9"><a class="dropdown-item" [href]="link9">{{texto9}}</a></li>
+            <li  *ngIf="texto10"><a class="dropdown-item" [href]="link10">{{texto10}}</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li  *ngIf="texto11"><a class="dropdown-item" [href]="link10">{{texto11}}</a></li>
+          </ul>
+        </li>
+
+      </ul>
+
+
+      <form
+      *ngIf="search"
+      class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+        <button class="btn btn-outline-light text-white" type="submit">Buscar</button>
+      </form>
+
+      <div class=""
+      *ngIf="texto12"
+      class="navbar-text text-white">
+        {{texto12}}
+      </div>
+
+    </div>
+  </div>
+</nav>
