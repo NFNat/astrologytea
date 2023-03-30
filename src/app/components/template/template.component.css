@@ -21,4 +21,11 @@ padding-bottom: 2.5rem;
 .content {
 background-color: var(--color-catSkill);
 }
-
+.cartas{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

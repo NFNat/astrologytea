@@ -90,6 +90,25 @@
     </div>
 
     <div class="border-bottom w-75 mb-2"></div>
+
+    <!-- Botones cards -->
+    <div class="w-75">
+      <app-button
+      (buttonClick)="handleButtonClick6()"
+      [buttonText]="'Cards 1'"
+      [buttonClass]="'btn button button5 w-100 mb-2'">
+      </app-button>
+    </div>
+    <div class="w-75">
+      <app-button
+      (buttonClick)="handleButtonClick7()"
+      [buttonText]="'Cards 2'"
+      [buttonClass]="'btn button button5 w-100 mb-2'">
+      </app-button>
+    </div>
+
+    <div class="border-bottom w-75 mb-2"></div>
+
     <!-- Botones modales  -->
     <div class="w-75">
       <app-button
@@ -209,7 +228,7 @@
       </div>
     </div>
 
-    <ng-container *ngIf="!buttonWasClicked && !buttonWasClicked2 && !buttonWasClicked3 && !buttonWasClicked4 && !buttonWasClicked5">
+    <ng-container *ngIf="!buttonWasClicked && !buttonWasClicked2 && !buttonWasClicked3 && !buttonWasClicked4 && !buttonWasClicked5 && !buttonWasClicked6 && !buttonWasClicked7">
       <div class="Container">
         <h1>Angular Component Driven Development Example</h1>
 
@@ -276,9 +295,6 @@
       [slide3Img]="'../../../assets/tunel.jpg'"
       ></app-carrousel>
       <div class="border-bottom w-75 mb-2"></div>
-
-
-
     </ng-container>
 
 
@@ -553,9 +569,8 @@
   </div>
 
 
-
 <!-- Charts 3 -->
-<div class="" *ngIf="buttonWasClicked5">
+<div class="container contenedor" *ngIf="buttonWasClicked5">
   <div class="row ">
 
     <div>
@@ -708,6 +723,59 @@
 
   </div>
 
+
+  <!-- Cards -->
+  <div *ngIf="buttonWasClicked6" class="cartas">
+
+    <app-card
+    class="cartas"
+  [cardClass]="'card1 cartas'"
+  [listGroup]="true"
+  [cardImg]="true"
+  [listGroup]="true"
+  [cardFooter]="true"
+  [datosCards]="datosCards"
+  [var1]="'imgCard'"
+  [var2]="'titleCard'"
+  [var3]="'textCard'"
+  [var4]="'item1'"
+  [var5]="'item2'"
+  [var6]="'item3'"
+  [var7]="'url1'"
+  [var8]="'linkText1'"
+  [var9]="'url2'"
+  [var10]="'linkText2'"
+  ></app-card>
+
+
+
+  <!-- <app-card
+  [cardClass]="'card1'"
+  [listGroup]="true"
+  [cardImg]="true"
+  [cardImgUrl]="'../../../assets/bote.jpg'"
+  [cardTitle]="'Card de ejemplo'"
+  [cardText]="'lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
+  [listGroup]="true"
+  [item1]="'opcion 1'"
+  [item2]="'opcion 2'"
+  [item3]="'opcion 3'"
+  [cardFooter]="true"
+  [cardLink1]="'opciones'"
+  [cardLink2]="'sarasa'"
+  [url1]="'#'"
+  [url2]="'#'"
+  ></app-card> -->
+</div>
+<div *ngIf="buttonWasClicked7" class="div">
+  <!-- <app-card
+  [cardClass]="'card2'"
+  [cardTitle]="'Card de ejemplo'"
+  [cardText]="'lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
+
+  ></app-card> -->
+
+</div>
 </div>
 </div>
 

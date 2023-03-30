@@ -161,12 +161,40 @@ carousel1 = [
     },
   ]
 
+  datosCards = [
+    {
+      imgCard: "../../../assets/bote.jpg",
+      titleCard: "Card 1",
+      textCard: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam mauris, eget aliquam nisl nisl sit amet nisl. ",
+      item1: "Item 1",
+      item2: "Item 2",
+      item3: "Item 3",
+      url1: "https://www.google.com/",
+      url2: "#",
+      linkText1: "Link 1",
+      linkText2: "Link 2",
+    },
+    {
+      imgCard: "../../../assets/china.jpg",
+      titleCard: "Card 2",
+      textCard: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam mauris, eget aliquam nisl nisl sit amet nisl. ",
+      item1: "Item 1",
+      item2: "Item 2",
+      item3: "Item 3",
+      url1: "https://www.google.com/",
+      url2: "#",
+      linkText1: "Link 1",
+      linkText2: "Link 2",
+    }]
+
 
   buttonWasClicked = false;
   buttonWasClicked2 = false;
   buttonWasClicked3 = false;
   buttonWasClicked4 = false;
   buttonWasClicked5 = false;
+  buttonWasClicked6 = false;
+  buttonWasClicked7 = false;
 
   textoPrueba ="";
 
@@ -215,6 +243,8 @@ handleButtonClick() {
     this.buttonWasClicked3 =false
     this.buttonWasClicked4 =false
     this.buttonWasClicked5 =false
+    this.buttonWasClicked6 =false
+    this.buttonWasClicked7 =false
 
   }
   handleButtonClick3() {
@@ -224,6 +254,8 @@ handleButtonClick() {
     this.buttonWasClicked2 =false
     this.buttonWasClicked4 =false
     this.buttonWasClicked5 =false
+    this.buttonWasClicked6 =false
+    this.buttonWasClicked7 =false
   }
   handleButtonClick4() {
     this.buttonWasClicked4 = !this.buttonWasClicked4 ;
@@ -231,6 +263,8 @@ handleButtonClick() {
     this.buttonWasClicked2 =false
     this.buttonWasClicked3 =false
     this.buttonWasClicked5 =false
+    this.buttonWasClicked6 =false
+    this.buttonWasClicked7 =false
   }
 
   handleButtonClick5() {
@@ -239,8 +273,28 @@ handleButtonClick() {
     this.buttonWasClicked2 =false
     this.buttonWasClicked3 =false
     this.buttonWasClicked4 =false
+    this.buttonWasClicked6 =false
+    this.buttonWasClicked7 =false
+
+
   }
 
-
-
+  handleButtonClick6() {
+    this.buttonWasClicked6 = !this.buttonWasClicked6 ;
+    this.buttonWasClicked =false
+    this.buttonWasClicked2 =false
+    this.buttonWasClicked3 =false
+    this.buttonWasClicked4 =false
+    this.buttonWasClicked5 =false
+    this.buttonWasClicked7 =false
+  }
+  handleButtonClick7() {
+    this.buttonWasClicked7 = !this.buttonWasClicked7 ;
+    this.buttonWasClicked =false
+    this.buttonWasClicked2 =false
+    this.buttonWasClicked3 =false
+    this.buttonWasClicked4 =false
+    this.buttonWasClicked5 =false
+    this.buttonWasClicked6 =false
+  }
 }

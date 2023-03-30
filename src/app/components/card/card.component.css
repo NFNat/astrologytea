@@ -1,0 +1,20 @@
+.card1{
+  background-color: var(--color-lynch);
+  color: var(--color-amber);
+}
+
+.card2{
+  background-color: var(--color-powder);
+  color: var(--color-catSkill);
+}
+a{
+  color: var(--color-amber);
+  text-decoration: none;
+  padding-inline: 10px;
+}
+a:hover{
+  color: var(--color-carrot);
+  text-shadow: 10px 10px 10px var(--color-lynch); /*ver esto*/
+
+}
+

@@ -1,0 +1,71 @@
+<div *ngFor="let card of datosCards"ngClass="cartas">
+
+<div class="card "
+[class]="cardClass"
+style="width: 18rem;">
+  <img
+  *ngIf="cardImg"
+  [src]="renombraPropiedades(card, var1, var2, var3, var4, var5, var6, var7, var8, var9, var10).propiedad1" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{renombraPropiedades(card, var1, var2, var3, var4, var5, var6, var7,var8, var9, var10).propiedad1}}</h5>
+    <p class="card-text">{{renombraPropiedades(card, var1, var2, var3, var4, var5, var6, var7,var8, var9, var10).propiedad3}}</p>
+  </div>
+  <ul
+  *ngIf="listGroup"
+  class="list-group list-group-flush"  >
+    <li [class]="cardClass" class="list-group-item">{{renombraPropiedades(card, var1, var2, var3, var4, var5, var6, var7,var8, var9, var10).propiedad4}}</li>
+    <li [class]="cardClass" class="list-group-item">{{renombraPropiedades(card, var1, var2, var3, var4, var5, var6, var7,var8, var9, var10).propiedad5}}</li>
+    <li [class]="cardClass" class="list-group-item">{{renombraPropiedades(card, var1, var2, var3, var4, var5, var6, var7,var8, var9, var10).propiedad6}}</li>
+
+  </ul>
+  <div
+  *ngIf="cardFooter"
+  class="card-body">
+    <a [href]="renombraPropiedades(card, var1, var2, var3, var4, var5, var6, var7,var8, var9, var10).propiedad7" class="card-link">{{renombraPropiedades(card, var1, var2, var3, var4, var5, var6, var7,var8, var9, var10).propiedad8}}</a>
+    <a [href]="renombraPropiedades(card, var1, var2, var3, var4, var5, var6, var7,var8, var9, var10).propiedad9" class="card-link">{{renombraPropiedades(card, var1, var2, var3, var4, var5, var6, var7,var8, var9, var10).propiedad10}}</a>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- solo una card -->
+<!--
+<div class="card "
+[class]="cardClass"
+style="width: 18rem;">
+  <img
+  *ngIf="cardImg"
+  [src]="cardImgUrl" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{cardTitle}}</h5>
+    <p class="card-text">{{cardText}}</p>
+  </div>
+  <ul
+  *ngIf="listGroup"
+  class="list-group list-group-flush"  >
+    <li [class]="cardClass" class="list-group-item">{{item1}}</li>
+    <li [class]="cardClass" class="list-group-item">{{item2}}</li>
+    <li [class]="cardClass" class="list-group-item">{{item3}}</li>
+
+  </ul>
+  <div
+  *ngIf="cardFooter"
+  class="card-body">
+    <a [href]="url1" class="card-link">{{cardLink1}}</a>
+    <a [href]="url2" class="card-link">{{cardLink2}}</a>
+  </div>
+</div> -->
