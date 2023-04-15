@@ -1,15 +1,21 @@
+
+<div class=" container-fluid contenedor ">
+  <div class="row">
 <app-navbar
 [navbarId]="'navbar'"
 [navbarTarget]="'#navbar'"
-[navbar1]="'fixed-top navbar navbar-expand-lg bodyNav'"
+[navbarClass1]="'fixed-top navbar navbar-expand-lg bodyNav  '"
+[navbarClass2]="'collapse navbar-collapse '"
+[navbarClass3]="'d-flex w100 justify-content-end me-4 '"
+[navbarClass4]="'textNav'"
 
-[brand]="'CDD'"
+[brand]="'Astrology Tea'"
 [link1]="'https://getbootstrap.com/docs/5.3/components/navbar/'"
 [texto2]="'Home'"
 [link2]="'#'"
-[texto3]="'Tablas'"
+[texto3]="'Productos'"
 [link3]="'#'"
-[texto4]="'Charts'"
+[texto4]="'Contacto'"
 [link4]="'#'"
 
 [dropDown]="true"
@@ -22,706 +28,62 @@
 [texto11]="'opcion 3'"
 [link11]="'#'"
 
-[search]="true"
 [colapse]="true"
 
 ></app-navbar>
 
-<app-navbar
-[navbarId]="'footer'"
-[navbarTarget]="'#footer'"
-[navbar1]="'fixed-bottom navbar navbar-expand-lg bodyNav1 '"
-[navbar2]="'d-flex flex-column justify-content-center '"
-[texto12]="'Esto es un footer'"
-></app-navbar>
+</div>
 
+<div class="row sarasa">
 
-
-<div class=" container-fluid contenedor d-flex">
-
-
-
-  <!-------------->
-  <!-- Botones  -->
-  <!-------------->
-
-  <div class=" menu_lateral col-5 col-sm-4 col-md-3 col-xl-2">
-    <!-- Botones table  -->
-
-    <div class="w-75">
-      <app-button
-      (buttonClick)="handleButtonClick()"
-      [buttonText]="'Tabla 1'"
-      [buttonClass]="'btn button button1 opacity-75 w-100 mb-1'">
-      </app-button>
-    </div>
-
-    <div class="w-75">
-      <app-button
-      (buttonClick)="handleButtonClick2()"
-      [buttonText]="'Tabla 2'"
-      [buttonClass]="'btn button button1 w-100 mb-2'">
-      </app-button>
-    </div>
-    <div class="border-bottom w-75 mb-2"></div>
-
-    <!-- Botones Charts -->
-    <div class="w-75">
-      <app-button
-      (buttonClick)="handleButtonClick3()"
-      [buttonText]="'Charts1'"
-      [buttonClass]="'btn button button4 w-100 mb-2'">
-      </app-button>
-    </div>
-    <div class="w-75">
-      <app-button
-      (buttonClick)="handleButtonClick4()"
-      [buttonText]="'Charts2'"
-      [buttonClass]="'btn button button4 w-100 mb-2'">
-      </app-button>
-    </div>
-
-    <div class="w-75">
-      <app-button
-      (buttonClick)="handleButtonClick5()"
-      [buttonText]="'Charts3'"
-      [buttonClass]="'btn button button4 w-100 mb-2'">
-      </app-button>
-    </div>
-
-    <div class="border-bottom w-75 mb-2"></div>
-
-    <!-- Botones cards -->
-    <div class="w-75">
-      <app-button
-      (buttonClick)="handleButtonClick6()"
-      [buttonText]="'Cards 1'"
-      [buttonClass]="'btn button button5 w-100 mb-2'">
-      </app-button>
-    </div>
-    <div class="w-75">
-      <app-button
-      (buttonClick)="handleButtonClick7()"
-      [buttonText]="'Cards 2'"
-      [buttonClass]="'btn button button5 w-100 mb-2'">
-      </app-button>
-    </div>
-
-    <div class="border-bottom w-75 mb-2"></div>
-
-    <!-- Botones modales  -->
-    <div class="w-75">
-      <app-button
-      [buttonText]="'Modal No static '"
-      [buttonClass]="'btn  button button2 w-100 mb-1'"
-      data-bs-toggle="modal"
-      data-bs-target="#modal1"
-      ></app-button>
-    </div>
-    <div class="w-75">
-      <app-button
-      [buttonText]="'Modal static gris '"
-      [buttonClass]="'btn button button2 w-100 mb-1 '"
-      data-bs-toggle="modal"
-      data-bs-target="#modal2"
-        ></app-button>
-    </div>
-    <div class="w-75">
-      <app-button
-      [buttonText]="'Modal static T'"
-      [buttonClass]="'btn button button2 w-100 mb-1'"
-      data-bs-toggle="modal"
-      data-bs-target="#modal3"
-      ></app-button>
-    </div>
-    <div class="w-75">
-      <app-button
-      [buttonText]="'Modal fullscreen'"
-      [buttonClass]="'btn button button2 w-100 mb-2'"
-      data-bs-toggle="modal"
-      data-bs-target="#modal4"
-      ></app-button>
-    </div>
-    <div class="border-bottom w-75 mb-2"></div>
-
-    <!-- Botones Canvas  -->
-    <div class="w-75">
-    <app-button
-    [buttonText]="'Canvas 1'"
-    [buttonClass]="'btn button button3 w-100 mb-1 '"
-    data-bs-toggle="offcanvas"
-    data-bs-target="#canvas1"
-      > </app-button>
-  </div>
-    <div class="w-75">
-    <app-button
-    [buttonText]="'Canvas 2'"
-    [buttonClass]="'btn button button3 w-100 mb-1 '"
-    data-bs-toggle="offcanvas"
-    data-bs-target="#canvas2"
-      > </app-button>
-  </div>
-    <div class="w-75">
-    <app-button
-    [buttonText]="'Canvas 3'"
-    [buttonClass]="'btn button button3 w-100 mb-1 '"
-    data-bs-toggle="offcanvas"
-    data-bs-target="#canvas3"
-      > </app-button>   </div>
-    <div class="w-75">
-    <app-button
-    [buttonText]="'Canvas 4'"
-    [buttonClass]="'btn button button3 w-100 mb-1 '"
-    data-bs-toggle="offcanvas"
-    data-bs-target="#canvas4"
-      > </app-button>
-
-      <div class="border-bottom w-75 mb-2"></div>
-
-      <app-button
-      (buttonClick)="showSuccess()"
-      [buttonText]="'Toaster'"
-      [buttonClass]="'btn button button4 w-100 mb-1 '"
-        > </app-button>
-
-        <app-button
-        (buttonClick)="show()"
-        [buttonText]="'Toaster 1'"
-        [buttonClass]="'btn button button4 w-100 mb-1 '"
-          > </app-button>
-
-          <app-button
-        (buttonClick)="showToast()"
-        [buttonText]="'Toaster 2'"
-        [buttonClass]="'btn button button4 w-100 mb-1 '"
-          > </app-button>
-
-  </div>
-
-  <div id="myToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-    <div class="toast-header">
-
-      <strong class="me-auto">Bootstrap</strong>
-      <small>11 mins ago</small>
-      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-    </div>
-    <div class="toast-body">
-      Hello, world! This is a toast message.
+  <div class=" menu_lateral col-12 col-sm-12 col-md-3 col-xl-4 ">
+    <div>Lorem, ipsum dolor.</div>
+    <div>Astrology tea</div>
+    <div>descripcion</div>
+    <div class="p-5 d-flex">
+      <button> un boton</button>
+      <button> otro boton</button>
     </div>
   </div>
 
 
+  <div class=" carousel col-12 col-sm-12 col-md-9 col-xl-8 ">
+    <app-carrousel
+    [id]="'carousel3'"
+    [target]="'#carousel3'"
+    [carouselRide]="'carousel'"
+    [carouselClass]="'carousel slide'"
+    [carouselClass1]="'carousel-indicators'"
+    [carouselClass2]="'carousel-item'"
+    [carouselImg]="'img40'"
+    [carouselRide]="'carousel'"
+    [slide1Title]="' Primer slide carro 2 ' "
+    [slide1Text]="'Sarasa lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
+    [slide1Img]="'../../../assets/teapot1.png'"
+    [slide2Title]="' Segunda slide carro 3 ' "
+    [slide2Text]="' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus aliquam perspiciatis distinctio beatae sunt illo?'"
+    [slide2Img]="'../../../assets/teapot2.png'"
+    [slide3Title]="' Tercer slide carro 3 ' "
+    [slide3Text]="'  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium labore incidunt alias dolor.'"
+    [slide3Img]="'../../../assets/teapot3.png'"
+    ></app-carrousel>
   </div>
+</div>
 
-<!-- Tables -->
-  <div class="col-7 col-sm-8 col-md-9 col-xl-10 content p-4">
+<div class="row productos">
+<app-card
+class="cartas"
+[cardClass]="'card1 cartas'"
 
+[datosCards]="datosCards"
+[var1]="'imgCard'"
+[var2]="'titleCard'"
+[var3]="'textCard'"
 
-    <div id="myToast" class="toast" role="alert" aria-live="polite" aria-atomic="true">
-      <div class="toast-header">
-        <strong class="me-auto">Bootstrap</strong>
-        <small>11 mins ago</small>
-        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
-      </div>
-      <div class="toast-body">
-        Hello, world! This is a toast message.
-      </div>
-    </div>
 
-    <ng-container *ngIf="!buttonWasClicked && !buttonWasClicked2 && !buttonWasClicked3 && !buttonWasClicked4 && !buttonWasClicked5 && !buttonWasClicked6 && !buttonWasClicked7">
-      <div class="Container">
-        <h1>Astrology Tea</h1>
+></app-card>
 
-        <p>Try pressing the different buttons</p>
-
-
-
-      </div>
-
-      <!-- * Para recorrer un array *
-      <div class="contenedorCarousel">
-      <app-carrousel
-      [id]="'carousel1'"
-      [target]="'#carousel1'"
-      [carouselClass]="'carousel slide'"
-      [carouselClass1]="'carousel-indicators'"
-      [datosCarousel]="carousel1"
-      [var1]="'slideTitle'"
-      [var2]="'slideText'"
-      [var3]="'slideImg'"
-      [var4]="'active'"
-      [var5]="'carouselImg'"
-      ></app-carrousel>
-    </div> -->
-
-      <div class="border-bottom w-75 mb-5"></div>
-      <app-carrousel
-      [id]="'carousel2'"
-      [target]="'#carousel2'"
-      [carouselRide]="'carousel'"
-      [carouselClass]="'carousel slide'"
-      [carouselClass1]="'carousel-indicators'"
-      [carouselClass2]="'carousel-item'"
-      [carouselImg]="'img30'"
-      [carouselRide]="''"
-      [slide1Title]="' Primer slide carro 2 ' "
-      [slide1Text]="'Sarasa lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
-      [slide1Img]="'../../../assets/travel.jpg'"
-      [slide2Title]="' Segunda slide carro 2 ' "
-      [slide2Text]="' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus aliquam perspiciatis distinctio beatae sunt illo?'"
-      [slide2Img]="'../../../assets/rabbit.jpg'"
-      [slide3Title]="' Tercer slide carro 2 ' "
-      [slide3Text]="'  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium labore incidunt alias dolor.'"
-      [slide3Img]="'../../../assets/flower.jpg'"
-      ></app-carrousel>
-      <div class="border-bottom w-75 mb-2"></div>
-      <app-carrousel
-      [id]="'carousel3'"
-      [target]="'#carousel3'"
-      [carouselRide]="'carousel'"
-      [carouselClass]="'carousel slide'"
-      [carouselClass1]="'carousel-indicators'"
-      [carouselClass2]="'carousel-item'"
-      [carouselImg]="'img40'"
-      [carouselRide]="'carousel'"
-      [slide1Title]="' Primer slide carro 2 ' "
-      [slide1Text]="'Sarasa lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
-      [slide1Img]="'../../../assets/bote.jpg'"
-      [slide2Title]="' Segunda slide carro 3 ' "
-      [slide2Text]="' Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus aliquam perspiciatis distinctio beatae sunt illo?'"
-      [slide2Img]="'../../../assets/china.jpg'"
-      [slide3Title]="' Tercer slide carro 3 ' "
-      [slide3Text]="'  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusantium labore incidunt alias dolor.'"
-      [slide3Img]="'../../../assets/tunel.jpg'"
-      ></app-carrousel>
-      <div class="border-bottom w-75 mb-2"></div>
-    </ng-container>
-
-
-    <app-table
-    *ngIf="buttonWasClicked"
-    [tableClass] ="'table2 w-75 rounded-4'"
-    [nameCol1]="'CNPJ'"
-    [nameCol2]="'user'"
-    [nameCol3]="'company'"
-    [nameCol4]="'email'"
-    [datosTabla]="brokers"
-    [var1]="'ID'"
-    [var2]="'CNPJ'"
-    [var3]="'user'"
-    [var4]="'company'"
-    [var5]="'email'"
-    ></app-table>
-
-    <app-table
-    *ngIf="buttonWasClicked2"
-    [tableClass] ="'table1 w-50 rounded-3'"
-    [nameCol1]="'Name'"
-    [nameCol2]="'Address'"
-    [nameCol3]="'phone'"
-    [nameCol4]="'email'"
-    [datosTabla]="clients"
-    [var1]="'clientName'"
-    [var2]="'address'"
-    [var3]="'phone'"
-    [var4]="'email'"
-    ></app-table>
-    <p>{{ textoPrueba }}</p>
-
-
-<!-- Charts 1 -->
-  <div class="container" *ngIf="buttonWasClicked3">
-    <div class="row ">
-      <div class="col-6">
-      <app-chart
-        [id]="'chart1'"
-        [chartType]="'line'"
-        [chartClass]="'w-100'"
-        [dataLabels]="labels"
-        [border]="'#3d3d5c'"
-
-        [dataValues1]="values1"
-        [dataLabel1]="'Valores A'"
-        [data1Bg]="'rgba(178, 178, 220, 0.65)'"
-        [data1Hidden]="false"
-
-        [dataValues2]="values2"
-        [dataLabel2]="'Valores B'"
-        [data2Bg]="'#89a7d1'"
-
-        [data2Hidden]="false"
-
-        [dataValues3]="values5"
-        [dataLabel3]="'Valores C'"
-        [data3Bg]="'#89a7d1'"
-        [data3Hidden]="false"
-        ></app-chart>
-      </div>
-      <div class="col-6">
-        <app-chart
-          [id]="'chart2'"
-          [chartType]="'bar'"
-          [chartClass]="'w-100'"
-          [dataLabels]="labels"
-          [border]="'#3d3d5c'"
-
-          [dataValues1]="values1"
-          [dataLabel1]="'Valores A'"
-          [data1Bg1]="[
-          'rgb(255, 99, 132)',
-          'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)'
-        ]"
-          [data1Hidden]="false"
-
-          [dataValues2]="values2"
-          [dataLabel2]="'Valores B'"
-          [data2Bg]="'#89a7d1'"
-          [data2Hidden]="false"
-
-          [dataValues3]="values5"
-          [dataLabel3]="'Valores C'"
-          [data3Bg]="'#89a7d1'"
-          [data3Hidden]="false"
-          ></app-chart>
-        </div>
-
-    </div>
-      <div class="row pt-5">
-        <div class="col-6">
-          <app-chart
-          [id]="'chart3'"
-          [chartType]="'line'"
-          [chartClass]="'w-100'"
-          [dataLabels]="labels"
-          [tension]="0.5"
-          [border]="'#8f2d56'"
-          [radius]="0"
-          [borderWith]="1"
-
-          [dataValues1]="values1"
-          [dataLabel1]="'Valores A'"
-          [data1Bg]="'rgba(178, 178, 220, 0.35)'"
-          [data1Hidden]="false"
-          [datafill]="true"
-
-          [dataValues2]="values2"
-          [dataLabel2]="'Valores B'"
-          [data2Bg]="'rgba(255, 99, 132, 0.35)'"
-          [data2Hidden]="false"
-
-          [dataValues3]="values5"
-          [dataLabel3]="'Valores C'"
-          [data3Bg]="'#89a7d1'"
-          [data3Hidden]="false"
-
-          ></app-chart>
-
-
-        </div>
-        <div class="col-6">
-        <app-chart
-        [id]="'chart4'"
-        [chartType]="'radar'"
-        [chartClass]="'w-75'"
-        [dataLabels]="labels1"
-        [border]="'#3d3d5c'"
-        [datafill]="true"
-
-        [dataValues1]="values3"
-        [dataLabel1]="'Valores X'"
-        [data1Bg]="'rgba(178, 178, 220, 0.65)'"
-        [data1Hidden]="false"
-
-        [dataValues2]="values4"
-        [dataLabel2]="'Valores Y'"
-        [data2Bg]="'#ffbf00'"
-
-        [data2Hidden]="false"
-        [data3Bg]="'transparent'"
-        [data3border]="'transparent'"
-        ></app-chart>
-      </div>
-
-
-      </div>
-  </div>
-
-<!-- Charts 2 -->
-
-  <div class="container contenedor" *ngIf="buttonWasClicked4">
-<div class="row">
-  <div class="col-6">
-      <app-chart
-        [id]="'chart5'"
-        [chartType]="'pie'"
-        [chartClass]="'w-50'"
-        [dataLabels]="labels"
-
-        [dataValues1]="values1"
-        [dataLabel1]="'Valores A'"
-
-        [data1Bg1]=" [
-        'rgb(255, 99, 132)',
-        'rgb(54, 162, 235)',
-        'rgb(255, 205, 86)'
-      ]"
-        [data1border]="'#3d3d5c'"
-        [data1Hidden]="false"
-
-        ></app-chart>
-      </div>
-<div class="col-6">
-        <app-chart
-          [id]="'chart6'"
-          [chartType]="'doughnut'"
-          [chartClass]="'w-50'"
-          [dataLabels]="labels"
-
-          [dataValues1]="values1"
-          [dataLabel1]="'Valores A'"
-          [data1border]="'#3d3d5c'"
-          [data1Hidden]="false"
-          [data1Bg1]="[
-          'rgb(255, 99, 132)',
-          'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)',
-          'rgb(155, 99, 100)',
-          'rgb(154, 62, 135)',
-          'rgb(200, 105, 186)',
-        ]"
-
-
-          [dataValues2]="values2"
-          [dataLabel2]="'Valores B'"
-
-          [data2border]="'#3d3d5c'"
-          [data2Hidden]="false"
-          [data2Bg2]="[
-          'rgb(255, 99, 132)',
-          'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)',
-          'rgb(155, 99, 100)',
-          'rgb(154, 62, 135)',
-          'rgb(200, 105, 186)'
-        ]"
-
-          [dataValues3]="values5"
-          [dataLabel3]="'Valores C'"
-
-          [data3border]="'#3d3d5c'"
-          [data3Hidden]="false"
-          [data3Bg3]="[
-          'rgb(255, 99, 132)',
-          'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)',
-          'rgb(155, 99, 100)',
-          'rgb(154, 62, 135)',
-          'rgb(200, 105, 186)'
-        ]"
-          ></app-chart>
-        </div>
-
-      </div>
-<div class="row">
-
-  <div class="col-8">
-        <app-chart
-        [id]="'chart7'"
-        [chartType]="'polarArea'"
-        [chartClass]="'marginNegative'"
-        [dataLabels]="labels"
-        [labelDisplay]="false"
-
-        [dataValues1]="values1"
-        [dataLabel1]="'Valores A'"
-
-        [data1border]="'#3d3d5c'"
-        [data1Hidden]="false"
-        [data1Bg1]="[
-        'rgba(255, 99, 132, 0.65)',
-        'rgba(54, 162, 235, 0.65)',
-        'rgba(255, 205, 86, 0.65)',
-        'rgba(155, 99, 100, 0.65)',
-        'rgba(154, 62, 135, 0.65)',
-        'rgba(200, 105, 186, 0.65)',
-      ]"
-
-        [dataValues2]="values2"
-        [dataLabel2]="'Valores B'"
-
-        [data2border]="'#637b97'"
-        [data2Hidden]="false"
-        [data2Bg2]="[
-          'rgb(255, 99, 132)',
-          'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)',
-          'rgb(155, 99, 100)',
-          'rgb(154, 62, 135)',
-          'rgb(200, 105, 186)'
-        ]"
-        ></app-chart>
-      </div>
-
-      </div>
-
-      <div class="col-4"></div>
-  </div>
-
-
-<!-- Charts 3 -->
-<div class="container contenedor" *ngIf="buttonWasClicked5">
-  <div class="row ">
-
-    <div>
-      <h2> Mismos datos mostrados diferente</h2>
-      <label class="px-2">
-        <input type="radio" name="chartType" value="line" [(ngModel)]="chartType"> Line
-      </label>
-      <label  class="px-2">
-        <input type="radio" name="chartType" value="bar" [(ngModel)]="chartType"> Bar
-      </label>
-      <label  class="px-2">
-        <input type="radio" name="chartType" value="radar" [(ngModel)]="chartType"> Radar
-      </label>
-      <label  class="px-2">
-        <input type="radio" name="chartType" value="pie" [(ngModel)]="chartType"> Pie
-      </label>
-    </div>
-
-
-
-
-
-
-    <ng-container *ngIf="chartType === 'line'">
-    <app-chart
-      [id]="'chart8'"
-      [chartType]="'line'"
-      [chartClass]="'w-75'"
-      [dataLabels]="labels"
-      [border]="'#3d3d5c'"
-
-      [dataValues1]="values1"
-      [dataLabel1]="'Valores A'"
-      [data1Bg]="'rgba(178, 178, 220, 0.65)'"
-      [data1Hidden]="false"
-
-      [dataValues2]="values2"
-      [dataLabel2]="'Valores B'"
-      [data2Bg]="'#89a7d1'"
-
-      [data2Hidden]="false"
-
-      [dataValues3]="values5"
-      [dataLabel3]="'Valores C'"
-      [data3Bg]="'#89a7d1'"
-      [data3Hidden]="false"
-      ></app-chart>
-    </ng-container>
-    <ng-container *ngIf="chartType === 'bar'">
-      <app-chart
-        [id]="'chart8'"
-        [chartType]="'bar'"
-        [chartClass]="'w-75'"
-        [dataLabels]="labels"
-        [border]="'#3d3d5c'"
-
-        [dataValues1]="values1"
-        [dataLabel1]="'Valores A'"
-        [data1Bg]="'rgba(178, 178, 220, 0.65)'"
-        [data1Hidden]="false"
-
-        [dataValues2]="values2"
-        [dataLabel2]="'Valores B'"
-        [data2Bg]="'#89a7d1'"
-
-        [data2Hidden]="false"
-
-        [dataValues3]="values5"
-        [dataLabel3]="'Valores C'"
-        [data3Bg]="'#89a7d1'"
-        [data3Hidden]="false"
-        ></app-chart>
-      </ng-container>
-      <ng-container *ngIf="chartType === 'radar'">
-        <app-chart
-          [id]="'chart8'"
-          [chartType]="'radar'"
-          [chartClass]="'w-50'"
-          [dataLabels]="labels"
-          [border]="'#3d3d5c'"
-          [datafill]="true"
-
-          [dataValues1]="values1"
-          [dataLabel1]="'Valores A'"
-          [data1Bg]="'rgba(255, 99, 132, 0.35)'"
-          [data1Hidden]="false"
-
-          [dataValues2]="values2"
-          [dataLabel2]="'Valores B'"
-          [data2Bg]="'rgba(54, 162, 235, 0.35)'"
-
-          [data2Hidden]="false"
-
-          [dataValues3]="values5"
-          [dataLabel3]="'Valores C'"
-          [data3Bg]="'rgba(255, 205, 86, 0.65)'"
-          [data3Hidden]="false"
-          ></app-chart>
-        </ng-container>
-
-        <ng-container *ngIf="chartType === 'pie'">
-          <app-chart
-            [id]="'chart8'"
-            [chartType]="'pie'"
-            [chartClass]="'w-50'"
-            [dataLabels]="labels"
-            [border]="'#3d3d5c'"
-
-            [dataValues1]="values1"
-            [dataLabel1]="'Valores A'"
-            [data1Bg1]="[
-          'rgb(255, 99, 132)',
-          'rgb(54, 162, 235)',
-          'rgb(255, 205, 86)',
-          'rgb(155, 99, 100)',
-          'rgb(154, 62, 135)',
-          'rgb(200, 105, 186)',
-        ]"
-            [data1Hidden]="false"
-
-            [dataValues2]="values2"
-            [dataLabel2]="'Valores B'"
-            [data2Bg2]="[
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
-            'rgb(255, 205, 86)',
-            'rgb(155, 99, 100)',
-            'rgb(154, 62, 135)',
-            'rgb(200, 105, 186)',
-          ]"
-
-            [data2Hidden]="false"
-
-            [dataValues3]="values5"
-            [dataLabel3]="'Valores C'"
-            [data3Bg3]="[
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
-            'rgb(255, 205, 86)',
-            'rgb(155, 99, 100)',
-            'rgb(154, 62, 135)',
-            'rgb(200, 105, 186)',
-          ]"
-            [data3Hidden]="false"
-            ></app-chart>
-          </ng-container>
-
-    </div>
-
-
-  </div>
+</div>
 
 
   <!-- Cards -->
@@ -749,35 +111,21 @@
 
 
 
-  <!-- <app-card
-  [cardClass]="'card1'"
-  [listGroup]="true"
-  [cardImg]="true"
-  [cardImgUrl]="'../../../assets/bote.jpg'"
-  [cardTitle]="'Card de ejemplo'"
-  [cardText]="'lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
-  [listGroup]="true"
-  [item1]="'opcion 1'"
-  [item2]="'opcion 2'"
-  [item3]="'opcion 3'"
-  [cardFooter]="true"
-  [cardLink1]="'opciones'"
-  [cardLink2]="'sarasa'"
-  [url1]="'#'"
-  [url2]="'#'"
-  ></app-card> -->
 </div>
-<div *ngIf="buttonWasClicked7" class="div">
-  <!-- <app-card
-  [cardClass]="'card2'"
-  [cardTitle]="'Card de ejemplo'"
-  [cardText]="'lorem ipsum dolor sit amet, consectetur adipiscing elit.'"
 
-  ></app-card> -->
+<div class="row">
+<app-navbar
+[navbarId]="'footer'"
+[navbarTarget]="'#footer'"
+[navbarClass1]="'fixed-bottom navbar navbar-expand-lg bodyNav1 '"
+[navbarClass2]="'d-flex flex-column justify-content-center '"
+[texto12]="'Esto es un footer'"
+></app-navbar>
 
 </div>
+
 </div>
-</div>
+
 
 
 <!--  Modals  y canvas -->
@@ -851,5 +199,5 @@
   ></app-canvas>
 </div>
 
-<!-- Toast -->
+
 

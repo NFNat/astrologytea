@@ -1,7 +1,18 @@
 .bodyNav{
-  background-color: var(--color-powder);
+  background-color: var(--primero);
 }
 
 .bodyNav1{
-  background-color: var(--color-camelot);
+  background-color: var(--quinto);
+}
+.w100{
+  width: 100%;
+}
+.textNav{
+  color: #ffffff;
+  text-decoration: none;
+  padding: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+
 }

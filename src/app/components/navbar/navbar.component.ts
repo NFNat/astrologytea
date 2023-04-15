@@ -8,8 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
 
   @Input() navbarId: string ='';
-  @Input() navbar1: string ='';
-  @Input() navbar2: string ='';
+  @Input() navbarClass1: string ='';
+  @Input() navbarClass2: string ='';
+  @Input() navbarClass3: string ='';
+  @Input() navbarClass4: string ='';
   @Input() brand: string ='';
   @Input() navbarTarget: string ='';
 

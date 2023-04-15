@@ -1,26 +1,41 @@
 .contenedor{
 height: 100vh;
-padding-top: 2.5rem;
-padding-bottom: 2.5rem;
+/* background-color: var(--primero); */
+/* background-color: var(--segundo); */
+/* background-color: var(--tercero); */
+background-color: var(--cuarto);
+/* background-color: var(--quinto); */
+/* background-color: var(--sexto); */
 
 
+}
 
+.sarasa{
+  height: 40vh;
+  display: flex;
 
-
-/* width: 100vw; */
 
 }
 .menu_lateral{
-  background-color: var(--color-pigeon);
+
+  background-color: var(--quinto);
+  color: var(--cuarto);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center ;
+  margin-top: 8rem;
+  height: 100%;
+  padding: 0;
 
 }
-.content {
-background-color: var(--color-catSkill);
+.carousel{
+  margin-top: 8rem;
+  height: 100%;
+  padding: 0;
+
 }
+
 .cartas{
   display: flex;
   flex-direction: row;
@@ -28,4 +43,18 @@ background-color: var(--color-catSkill);
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+  margin-top: 14rem;
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+  .menu_lateral{
+    margin-top: 4rem;
+  }
+  .carousel{
+    margin-top: 0rem;
+  }
+
 }

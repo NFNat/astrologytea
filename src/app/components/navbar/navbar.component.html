@@ -3,9 +3,9 @@
 ? pulir el tema de las clases -->
 
 <nav
-[class]="navbar1"
+[class]="navbarClass1"
 >
-  <div class="container-fluid">
+  <div class="container-fluid  ">
     <a
     class="navbar-brand"
     [href]="link1"
@@ -25,40 +25,42 @@
     </button>
 
     <div
-    [class]="navbar2"
+    [class]="navbarClass2"
     class="collapse navbar-collapse"
     [id]="navbarId">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul
+      [class]="navbarClass3"
+      class="navbar-nav  mb-2 mb-lg-0 d-flex ">
         <li
         *ngIf="texto2"
         class="nav-item">
-          <a class="nav-link active text-white" aria-current="page" [href]="link2">{{texto2}}</a>
+          <a [classList]="navbarClass4" class="nav-link active " aria-current="page" [href]="link2">{{texto2}}</a>
         </li>
         <li
         *ngIf="texto3" class="nav-item">
-          <a class="nav-link" [href]="link3">{{texto3}}</a>
+          <a [classList]="navbarClass4"  class="nav-link" [href]="link3">{{texto3}}</a>
         </li>
         <li
         *ngIf="texto4" class="nav-item">
-          <a class="nav-link" [href]="link4">{{texto4}}</a>
+          <a [classList]="navbarClass4"  class="nav-link" [href]="link4">{{texto4}}</a>
         </li>
         <li
         *ngIf="texto5" class="nav-item">
-          <a class="nav-link" [href]="link5">{{texto5}}</a>
+          <a [classList]="navbarClass4" class="nav-link" [href]="link5">{{texto5}}</a>
         </li>
         <li
         *ngIf="texto6" class="nav-item">
-          <a class="nav-link" [href]="link6">{{texto6}}</a>
+          <a [classList]="navbarClass4" class="nav-link" [href]="link6">{{texto6}}</a>
         </li>
         <li
         *ngIf="texto7" class="nav-item">
-          <a class="nav-link" [href]="link7">{{texto7}}</a>
+          <a [classList]="navbarClass4" class="nav-link" [href]="link7">{{texto7}}</a>
         </li>
 
         <!-- dropDown  -->
         <li
         *ngIf="dropDown" class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" [href]="link8" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a [classList]="navbarClass4" class="nav-link dropdown-toggle" [href]="link8" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{texto8}}
           </a>
           <ul class="dropdown-menu  bodyNav">

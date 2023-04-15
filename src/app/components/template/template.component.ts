@@ -14,22 +14,6 @@ import { ToastrService } from 'ngx-toastr';
 export class TemplateComponent implements OnInit {
 
 
-  public chartType: string = 'line';
-
-
-// datos para el chart1
-
-  labels = [ "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo" ]
-  values1 = [ 0, 20, 40, 50, 60, 80, 53 ]
-  values2 = [ 0, 30, 50, 30, 50, 75, 26 ]
-  values5 = [ 0, 15, 30, 70, 20, 50, 15 ]
-
-// datos para el chart2
-
-labels1 = [ "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" ]
-values3 = [ 0, 20, 40, 50, 60, 80, 20, 40, 50, 60, 80, 15 ]
-values4 = [ 0, 30, 50, 30, 50, 75, 0, 30, 50, 30, 50, 75 ]
-
 
 
 carousel1 = [
@@ -164,8 +148,8 @@ carousel1 = [
   datosCards = [
     {
       imgCard: "../../../assets/bote.jpg",
-      titleCard: "Card 1",
-      textCard: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam mauris, eget aliquam nisl nisl sit amet nisl. ",
+      titleCard: "Categoría 1",
+      textCard: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt ",
       item1: "Item 1",
       item2: "Item 2",
       item3: "Item 3",
@@ -176,8 +160,8 @@ carousel1 = [
     },
     {
       imgCard: "../../../assets/china.jpg",
-      titleCard: "Card 2",
-      textCard: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt, nunc nisl aliquam mauris, eget aliquam nisl nisl sit amet nisl. ",
+      titleCard: "Categoría 2",
+      textCard: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt ",
       item1: "Item 1",
       item2: "Item 2",
       item3: "Item 3",
@@ -185,7 +169,49 @@ carousel1 = [
       url2: "#",
       linkText1: "Link 1",
       linkText2: "Link 2",
-    }]
+    },
+
+    {
+      imgCard: "../../../assets/china.jpg",
+      titleCard: "Categoría 3",
+      textCard: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt ",
+      item1: "Item 1",
+      item2: "Item 2",
+      item3: "Item 3",
+      url1: "https://www.google.com/",
+      url2: "#",
+      linkText1: "Link 1",
+      linkText2: "Link 2",
+    },
+
+    {
+      imgCard: "../../../assets/china.jpg",
+      titleCard: "Categoría 4",
+      textCard: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt ",
+      item1: "Item 1",
+      item2: "Item 2",
+      item3: "Item 3",
+      url1: "https://www.google.com/",
+      url2: "#",
+      linkText1: "Link 1",
+      linkText2: "Link 2",
+    },
+    {
+      imgCard: "../../../assets/china.jpg",
+      titleCard: "Categoría 5",
+      textCard: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam tincidunt ",
+      item1: "Item 1",
+      item2: "Item 2",
+      item3: "Item 3",
+      url1: "https://www.google.com/",
+      url2: "#",
+      linkText1: "Link 1",
+      linkText2: "Link 2",
+    }
+
+
+
+  ]
 
 
   buttonWasClicked = false;

@@ -8,7 +8,7 @@ import { TemplateComponent } from './components/template/template.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { CanvasComponent } from './components/canvas/canvas.component';
 import { TableComponent } from './components/table/table.component';
-import { ChartComponent } from './components/chart/chart.component';
+
 import { NgChartsModule } from 'ng2-charts';
 import { FormsModule } from '@angular/forms';
 import { CarrouselComponent } from './components/carrousel/carrousel.component';
@@ -28,7 +28,6 @@ import { CardComponent } from './components/card/card.component';
     ModalComponent,
     CanvasComponent,
     TableComponent,
-    ChartComponent,
     CarrouselComponent,
     NavbarComponent,
     CardComponent

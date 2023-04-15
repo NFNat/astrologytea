@@ -1,11 +1,12 @@
 .card1{
-  background-color: var(--color-lynch);
-  color: var(--color-amber);
+  background-color: var(--quinto);
+  color: var(--tercero);
+  width: 13rem !important;
 }
 
 .card2{
-  background-color: var(--color-powder);
-  color: var(--color-catSkill);
+  background-color: var(--primero);
+  color: var(--quinto);
 }
 a{
   color: var(--color-amber);
